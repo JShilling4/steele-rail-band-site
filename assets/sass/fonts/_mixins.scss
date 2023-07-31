@@ -1,0 +1,3 @@
+@mixin font-definition($FontName, $FontPath, $FontType) {
+  src: url("#{$FontPath}/#{$FontName}-#{$FontType}.ttf") format("truetype");
+}

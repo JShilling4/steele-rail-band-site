@@ -1,0 +1,24 @@
+:root {
+  --text-gradient-primary: linear-gradient(#fff, rgba(135, 134, 129) 15%, #fff);
+  --color-primary: rgb(164, 21, 8);
+  --color-primary-bright: rgb(255, 21, 0);
+  --color-primary-faded: rgba(164, 21, 8, 0.7);
+  --color-secondary: rgb(220, 220, 220);
+  --color-tertiary: rgb(182, 181, 181);
+  --orange: rgb(240, 115, 12);
+  --orange-faded: rgba(240, 115, 12, 0.7);
+  --bg-black: #000000;
+  --bg-primary: #000000;
+  --bg-secondary: #000000;
+  --banner-color: rgb(0, 0, 0);
+  --banner-color-faded: rgba(28, 17, 9, 0.6);
+  --input-bg-color: transparent;
+  --input-border-radius: 10px;
+  --copy-white-faded: rgba(255, 255, 255, 0.808);
+
+  --wrapper-width: 1129px;
+
+  @media screen and (max-width: 1150px) {
+    --wrapper-width: 100%;
+  }
+}

@@ -1,0 +1,59 @@
+@import "variables";
+@import "mixins";
+
+@font-face {
+  font-family: $RobotoFamily;
+  @include font-definition($RobotoName, $RobotoPath, "Black");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $RobotoFamily;
+  @include font-definition($RobotoName, $RobotoPath, "Bold");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $RobotoFamily;
+  @include font-definition($RobotoName, $RobotoPath, "Medium");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $RobotoFamily;
+  @include font-definition($RobotoName, $RobotoPath, "Regular");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $RobotoFamily;
+  @include font-definition($RobotoName, $RobotoPath, "Light");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $RobotoFamily;
+  @include font-definition($RobotoName, $RobotoPath, "Thin");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $RockSaltFamily;
+  @include font-definition($RockSaltName, $RockSaltPath, "Regular");
+}
+
+@font-face {
+  font-family: $WaterBrushFamily;
+  @include font-definition($WaterBrushName, $WaterBrushPath, "Regular");
+}
+
+@font-face {
+  font-family: $YesteryearFamily;
+  @include font-definition($YesteryearName, $YesteryearPath, "Regular");
+}
