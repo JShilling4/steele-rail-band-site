@@ -49,7 +49,7 @@ a {
     padding-top: 2rem;
   }
   @media screen and (max-width: 768px) {
-    margin-top: 3rem;
+    margin-top: 0;
   }
   @media screen and (max-width: 556px) {
     padding: 0 2rem 4rem;
@@ -85,6 +85,10 @@ body::-webkit-scrollbar-thumb {
 .view-container {
   padding: 2rem 0;
   background-color: var(--color-primary);
+
+  @media screen and (max-width: 768px) {
+    background-color: var(--bg-black);
+  }
 }
 
 .navlink-container {

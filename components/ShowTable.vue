@@ -78,7 +78,7 @@ defineProps<{
 
   tr {
     margin-bottom: 2rem;
-    border: 5px solid gray;
+    border: 2px solid gray;
     background-color: var(--banner-color);
     @media screen and (max-width: 768px) {
       display: flex;

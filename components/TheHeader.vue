@@ -106,6 +106,22 @@ nav {
     margin-top: 0;
   }
 
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    top: 4.55rem;
+    background-color: var(--banner-color);
+    right: 0;
+    padding: 1rem 0;
+    height: unset;
+    width: 10rem;
+    display: block;
+  }
+  @media screen and (max-width: 430px) {
+    top: 3.95rem;
+    width: 12rem;
+    display: block;
+  }
+
   .navlink a {
     font-size: 30px;
 

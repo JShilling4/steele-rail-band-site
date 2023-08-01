@@ -118,7 +118,7 @@ const shows = [
   padding: 0 3rem 6rem;
 
   @media screen and (max-width: 768px) {
-    padding: 0 2rem 4rem;
+    padding: 0 0 4rem;
     display: block;
   }
   @media screen and (max-width: 430px) {

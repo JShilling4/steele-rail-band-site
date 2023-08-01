@@ -97,16 +97,26 @@ section {
   margin: 2rem auto;
   max-width: 95%;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+    padding: 0;
   }
+
   &.photos {
     border: 2px solid var(--color-secondary);
     background-color: var(--banner-color);
+    @media screen and (max-width: 768px) {
+      border: none;
+    }
   }
   &.videos {
     border: 2px solid var(--color-secondary);
     background-color: var(--banner-color);
     color: var(--color-primary);
+
+    @media screen and (max-width: 768px) {
+      border: none;
+    }
 
     .column {
       flex: 33%;
