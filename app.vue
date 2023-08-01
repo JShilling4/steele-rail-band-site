@@ -43,8 +43,11 @@ a {
 .page-wrapper {
   margin: 0 auto;
   color: #fff;
-  padding: 2rem 2rem;
+  padding: 1rem 2rem 4rem;
 
+  @media screen and (max-width: 1024px) {
+    padding-top: 2rem;
+  }
   @media screen and (max-width: 768px) {
     margin-top: 3rem;
   }
@@ -58,12 +61,6 @@ a {
 
 .body-wrapper {
   min-height: 100vh;
-  background: radial-gradient(
-    var(--bg-secondary),
-    var(--bg-secondary),
-    var(--bg-primary)
-  );
-  background-size: cover;
 }
 
 * {
@@ -81,7 +78,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background-color: var(--color-primary);
-  outline: 1px solid slategrey;
+  outline: 1px solid var(--color-secondary);
   border-radius: 10px;
 }
 
@@ -98,7 +95,7 @@ body::-webkit-scrollbar-thumb {
 
   .fa-facebook {
     font-size: 3rem;
-    color: var(--color-primary-bright);
+    color: gray;
   }
 
   .navlink {
@@ -111,9 +108,9 @@ body::-webkit-scrollbar-thumb {
     text-align: right;
     cursor: pointer;
 
-    a:not(.fb a) {
+    .navlink-text {
       display: inline-block;
-      padding: 10px 35px;
+      padding: 10px 3.5rem;
       opacity: 1;
       color: var(--color-secondary);
       transition: opacity 0.3s;

@@ -6,25 +6,26 @@
       </RouterLink>
       <ul v-if="showMenu" class="navlink-container">
         <li class="navlink">
-          <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/shows" class="navlink-text">Shows</RouterLink>
         </li>
         <li class="navlink">
-          <RouterLink to="/shows">Shows</RouterLink>
+          <RouterLink to="/gallery" class="navlink-text">Gallery</RouterLink>
         </li>
         <li class="navlink">
-          <RouterLink to="/gallery">Gallery</RouterLink>
+          <RouterLink to="/about" class="navlink-text">About</RouterLink>
         </li>
         <li class="navlink">
-          <RouterLink to="/about">About</RouterLink>
-        </li>
-        <li class="navlink">
-          <RouterLink to="/contact">Contact</RouterLink>
+          <RouterLink to="/contact" class="navlink-text">Contact</RouterLink>
         </li>
         <li class="navlink fb">
           <font-awesome-icon :icon="['fab', 'facebook']" />
         </li>
       </ul>
-      <i class="fas fa-bars menu-toggle" @click="toggleMenu"></i>
+      <font-awesome-icon
+        :icon="['fas', 'bars']"
+        class="menu-toggle"
+        @click="toggleMenu"
+      />
     </nav>
   </header>
 </template>
@@ -77,10 +78,18 @@ function toggleMenu(): void {
   margin: 0 auto;
   padding: 0 3rem 0 1rem;
   background-color: var(--bg-black);
+
+  @media screen and (max-width: 1200px) {
+    padding: 0 0 0 1rem;
+  }
 }
 
 .logo {
   height: 200px;
+
+  @media screen and (max-width: 1024px) {
+    height: 100px;
+  }
 }
 
 nav {
@@ -90,18 +99,42 @@ nav {
   width: 100%;
 }
 
+.navlink-container {
+  margin-top: -3rem;
+
+  @media screen and (max-width: 1024px) {
+    margin-top: 0;
+  }
+
+  .navlink a {
+    font-size: 30px;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 24px;
+      padding: 1rem 2rem;
+    }
+    @media screen and (max-width: 1024px) {
+      font-size: 22px;
+      padding: 1rem 1.5rem;
+    }
+  }
+}
+
+.router-link-active {
+  color: var(--color-primary-bright) !important;
+}
+
 .menu-toggle {
   display: none;
   position: absolute;
   right: 2rem;
   opacity: 0.8;
   font-size: 2rem;
-  color: var(--color-primary);
+  color: var(--color-secondary);
 
   @media screen and (max-width: 768px) {
     display: block;
   }
-
   @media screen and (max-width: 430px) {
     right: 15px;
     font-size: 1.5rem;

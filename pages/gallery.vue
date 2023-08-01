@@ -14,7 +14,62 @@
       </section>
       <section class="videos">
         <h2>Videos</h2>
-        <div class="row"></div>
+        <div class="row">
+          <ul class="video-gallery">
+            <li>
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F6424770004236787%2F&show_text=false&width=267&t=0"
+                width="267"
+                height="476"
+                style="border: none; overflow: hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowFullScreen="true"
+              ></iframe>
+            </li>
+            <li>
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F827821695284020%2F&show_text=false&width=267&t=0"
+                width="267"
+                height="476"
+                style="border: none; overflow: hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowFullScreen="true"
+              ></iframe>
+            </li>
+            <li>
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F2281168242093724%2F&show_text=false&width=267&t=0"
+                width="267"
+                height="476"
+                style="border: none; overflow: hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowFullScreen="true"
+              ></iframe>
+            </li>
+            <li>
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F939100403817257%2F&show_text=false&width=267&t=0"
+                width="267"
+                height="476"
+                style="border: none; overflow: hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowFullScreen="true"
+              ></iframe>
+            </li>
+          </ul>
+        </div>
       </section>
     </div>
   </div>
@@ -23,7 +78,7 @@
 <script setup lang="ts">
 const title = ref("Steele Rail Band - Gallery");
 const description = ref("Browse Steele Rail Band photos and videos.");
-const imageCount = 7;
+const imageCount = 12;
 
 useHead({
   title,
@@ -40,7 +95,10 @@ useHead({
 section {
   padding: 2rem;
   margin: 2rem auto;
-  max-width: 1530px;
+  max-width: 95%;
+
+  @media screen and (max-width: 1200px) {
+  }
   &.photos {
     border: 2px solid var(--color-secondary);
     background-color: var(--banner-color);
@@ -86,20 +144,17 @@ h2 {
     background-color: var(--color-secondary);
   }
 }
-/* .row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-} */
 
 .image-gallery {
   display: flex;
+  /* justify-content: center; */
   flex-wrap: wrap;
   gap: 10px;
 }
 
 .image-gallery > li {
-  flex-basis: 200px;
+  width: 175px;
+  flex-grow: 1;
 }
 
 .image-gallery li img {
@@ -110,8 +165,27 @@ h2 {
   border-radius: 5px;
 }
 
-image-gallery::after {
+/* image-gallery::after {
   content: "";
   flex-basis: 200px;
+} */
+
+.video-gallery {
+  display: flex;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.video-gallery > li {
+  flex-basis: 270px;
+}
+
+.video-gallery li iframe {
+  object-fit: cover;
+  max-width: 100%;
+  height: 476px;
+  vertical-align: middle;
+  border-radius: 5px;
 }
 </style>

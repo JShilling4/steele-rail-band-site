@@ -2,7 +2,7 @@
   <div class="view-container">
     <div class="shows-container">
       <div class="table-wrapper">
-        <ShowTable v-for="show in shows" :key="show.id" :show="show" />
+        <ShowTable v-for="(show, i) in shows" :key="i" :show="show" />
       </div>
     </div>
   </div>
@@ -11,13 +11,12 @@
 <script setup lang="ts">
 const shows = [
   {
-    id: 1,
     date: {
       month: "Aug",
-      day: "12",
+      day: "12th",
     },
     venue: {
-      name: "Rack N' Helen's Bar & Grill",
+      name: "Rack N Helens Bar & Grill",
       website: "https://www.facebook.com/rackandhelens",
     },
     time: "10pm - 1am",
@@ -25,10 +24,9 @@ const shows = [
     eventLink: "https://www.facebook.com/events/600631315156465/",
   },
   {
-    id: 2,
     date: {
       month: "Aug",
-      day: "19",
+      day: "19th",
     },
     venue: {
       name: "Private Party",
@@ -39,10 +37,9 @@ const shows = [
     eventLink: "https://www.facebook.com/events/8539128622827992",
   },
   {
-    id: 3,
     date: {
       month: "Sep",
-      day: "2",
+      day: "2nd",
     },
     venue: {
       name: "Luken's Lake",
@@ -51,6 +48,46 @@ const shows = [
     time: "8pm - 11pm",
     location: "Roann, IN",
     eventLink: "https://www.facebook.com/events/8539128622827992",
+  },
+  {
+    date: {
+      month: "Sep",
+      day: "9th",
+    },
+    venue: {
+      name: "Downtown Huntington Days",
+      website: null,
+    },
+    time: "6:30pm - 8:30pm",
+    location: "Huntington, IN",
+    eventLink:
+      "https://www.facebook.com/events/1194016611491710?active_tab=about",
+  },
+  {
+    date: {
+      month: "Sep",
+      day: "15th",
+    },
+    venue: {
+      name: "Knockin' Boots Saloon",
+      website: "https://facebook.com/knockinbootssaloon",
+    },
+    time: "9pm - 1am",
+    location: "Fort Wayne, IN",
+    eventLink: "https://www.facebook.com/events/1005220330500330",
+  },
+  {
+    date: {
+      month: "Sep",
+      day: "16th",
+    },
+    venue: {
+      name: "Private Party",
+      website: null,
+    },
+    time: "9pm - 12am",
+    location: "",
+    eventLink: "https://www.facebook.com/events/558812119439267",
   },
 ];
 </script>
@@ -82,6 +119,7 @@ const shows = [
 
   @media screen and (max-width: 768px) {
     padding: 0 2rem 4rem;
+    display: block;
   }
   @media screen and (max-width: 430px) {
     padding: 0 1rem 4rem;

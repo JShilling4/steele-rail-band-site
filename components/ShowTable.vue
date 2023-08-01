@@ -5,7 +5,7 @@
         <td class="first" width="150">
           <div class="date-container">
             <div class="date-container__text">
-              <span class="month">{{ show.date.month }} </span>
+              <span class="month">{{ show.date.month }}&nbsp; </span>
               <span class="day">{{ show.date.day }}</span>
             </div>
           </div>
@@ -78,7 +78,7 @@ defineProps<{
 
   tr {
     margin-bottom: 2rem;
-    border: 5px solid var(--color-secondary);
+    border: 5px solid gray;
     background-color: var(--banner-color);
     @media screen and (max-width: 768px) {
       display: flex;
@@ -89,9 +89,31 @@ defineProps<{
   }
   td.first {
     padding: 2rem;
+
+    @media screen and (max-width: 1200px) {
+      width: 20px;
+      padding: 1rem;
+    }
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  td:nth-of-type(2) {
+    @media screen and (max-width: 1024px) {
+      width: 300px;
+    }
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
   td.last {
-    padding-bottom: 2rem;
+    text-align: right;
+
+    @media screen and (max-width: 768px) {
+      text-align: left;
+      font-size: 3rem;
+    }
   }
 
   td {
@@ -99,6 +121,12 @@ defineProps<{
     font-size: 18px;
     padding: 2rem;
     border: none;
+    cursor: default;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 16px;
+      padding: 1rem;
+    }
 
     @media screen and (max-width: 768px) {
       width: 100%;
@@ -115,9 +143,19 @@ defineProps<{
     }
     &.venue-name a {
       color: var(--color-primary-bright);
+      color: white;
       font-weight: 500;
       text-decoration: underline;
       transition: opacity 0.3s;
+      font-size: 20px;
+
+      @media screen and (max-width: 1200px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 22px;
+      }
+
       &:hover {
         color: var(--color-primary);
       }
@@ -125,13 +163,14 @@ defineProps<{
   }
 
   .date-container {
-    display: inline-block;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--color-primary);
     font-family: Roboto, sans-serif;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    border-radius: 5px;
 
     @media screen and (max-width: 768px) {
       height: 100px;
@@ -139,11 +178,13 @@ defineProps<{
       border-radius: 0;
     }
     &__text {
-      position: absolute;
-      top: 13px;
       width: 100%;
       text-align: center;
-      font-size: 15px;
+      font-size: 20px;
+
+      @media screen and (max-width: 1200px) {
+        font-size: 16px;
+      }
 
       @media screen and (max-width: 768px) {
         font-size: 25px;
@@ -153,6 +194,9 @@ defineProps<{
       .month {
         display: block;
         font-weight: 400;
+        @media screen and (max-width: 768px) {
+          display: inline;
+        }
       }
       .day {
         font-weight: 600;
@@ -161,7 +205,28 @@ defineProps<{
   }
 }
 
+td:nth-of-type(3) {
+  @media screen and (max-width: 1200px) {
+    width: 225px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+td:nth-of-type(4) {
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
+
 td:nth-of-type(5) {
   font-size: 3rem;
+  @media screen and (max-width: 1200px) {
+    font-size: 2rem;
+  }
 }
 </style>

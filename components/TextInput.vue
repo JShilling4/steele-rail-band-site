@@ -28,7 +28,7 @@ input {
   font-weight: 700;
   font-size: 16px;
   padding-left: 1rem;
-  border: 3px solid var(--color-secondary);
+  border: 1px solid var(--color-secondary);
 
   @media screen and (max-width: 556px) {
     height: 3rem;

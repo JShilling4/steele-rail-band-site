@@ -2,13 +2,12 @@
   <div class="page-wrapper">
     <PageHeading>Contact Us</PageHeading>
     <div class="container">
-      <p class="copy">
-        Please feel free to use our form below if you have any questions or
-        comments. You can also reach us at
-        <span>[address]@[provider].com</span> for booking & info.
-      </p>
       <div class="content">
         <form name="contact-form" class="contactForm" method="post" netlify>
+          <p class="copy">
+            Please use this form for any questions, comments or if you would
+            like to discuss booking.
+          </p>
           <input type="hidden" name="form-name" value="contact-form" />
           <InputGroup>
             <FormLabel>Name</FormLabel>
@@ -73,8 +72,7 @@ h2 {
   margin: 0 auto;
   .copy {
     font-family: Roboto;
-    margin: 0 auto;
-    width: 75%;
+    margin: 0 auto 3rem;
     line-height: 1.75;
     font-size: 18px;
     color: var(--copy-white-faded);
@@ -97,14 +95,14 @@ h2 {
 
 .content {
   display: flex;
-  margin-top: 2rem;
+  margin-top: 1rem;
   @media screen and (max-width: 1200px) {
     flex-wrap: wrap;
     justify-content: center;
   }
   .contactForm {
     width: 100%;
-    padding: 2rem 8rem;
+    padding: 0 8rem 4rem;
     @media screen and (max-width: 1200px) {
       width: 70%;
       order: 2;

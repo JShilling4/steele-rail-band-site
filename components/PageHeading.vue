@@ -14,8 +14,11 @@ h1 {
   margin-bottom: 3rem;
   font-family: Roboto, sans-serif;
 
-  @media screen and (max-width: 768px) {
-    font-size: 30px;
+  @media screen and (max-width: 1200px) {
+    font-size: 34px;
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 28px;
   }
   @media screen and (max-width: 430px) {
     margin-bottom: 2rem;

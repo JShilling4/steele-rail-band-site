@@ -4,16 +4,16 @@
 
     <ul class="navlink-container">
       <li class="navlink">
-        <RouterLink to="/shows">Shows</RouterLink>
+        <RouterLink to="/shows" class="navlink-text">Shows</RouterLink>
       </li>
       <li class="navlink">
-        <RouterLink to="/gallery">Gallery</RouterLink>
+        <RouterLink to="/gallery" class="navlink-text">Gallery</RouterLink>
       </li>
       <li class="navlink">
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/about" class="navlink-text">About</RouterLink>
       </li>
       <li class="navlink">
-        <RouterLink to="/contact">Contact</RouterLink>
+        <RouterLink to="/contact" class="navlink-text">Contact</RouterLink>
       </li>
       <li class="navlink fb">
         <a
@@ -58,7 +58,11 @@ useHead({
 }
 
 .logo {
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
+
+  @media screen and (max-width: 1024px) {
+    /* height: 400px; */
+  }
 }
 
 .navlink-container {
@@ -66,5 +70,12 @@ useHead({
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .navlink-text {
+    @media screen and (max-width: 1024px) {
+      font-size: 24px;
+      padding: 0 2rem;
+    }
+  }
 }
 </style>
