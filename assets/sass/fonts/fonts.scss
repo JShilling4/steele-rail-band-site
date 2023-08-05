@@ -44,16 +44,6 @@
 }
 
 @font-face {
-  font-family: $RockSaltFamily;
-  @include font-definition($RockSaltName, $RockSaltPath, "Regular");
-}
-
-@font-face {
-  font-family: $WaterBrushFamily;
-  @include font-definition($WaterBrushName, $WaterBrushPath, "Regular");
-}
-
-@font-face {
   font-family: $YesteryearFamily;
   @include font-definition($YesteryearName, $YesteryearPath, "Regular");
 }

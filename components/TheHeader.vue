@@ -90,6 +90,9 @@ function toggleMenu(): void {
   @media screen and (max-width: 1024px) {
     height: 100px;
   }
+  @media screen and (max-width: 430px) {
+    height: 75px;
+  }
 }
 
 nav {
@@ -115,9 +118,10 @@ nav {
     height: unset;
     width: 10rem;
     display: block;
+    border: 1px solid var(--color-primary-bright);
   }
   @media screen and (max-width: 430px) {
-    top: 3.95rem;
+    /* top: 3.95rem; */
     width: 12rem;
     display: block;
   }

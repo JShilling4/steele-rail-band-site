@@ -52,10 +52,10 @@ a {
     margin-top: 0;
   }
   @media screen and (max-width: 556px) {
-    padding: 0 2rem 4rem;
+    padding: 2rem 2rem 4rem;
   }
   @media screen and (max-width: 430px) {
-    padding: 0 1.5rem 2rem;
+    padding: 2rem 1.5rem 2rem;
   }
 }
 
@@ -88,6 +88,9 @@ body::-webkit-scrollbar-thumb {
 
   @media screen and (max-width: 768px) {
     background-color: var(--bg-black);
+  }
+  @media screen and (max-width: 460px) {
+    padding-top: 1rem;
   }
 }
 

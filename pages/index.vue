@@ -60,8 +60,11 @@ useHead({
 .logo {
   margin-bottom: 6rem;
 
-  @media screen and (max-width: 1024px) {
-    /* height: 400px; */
+  @media screen and (max-width: 768px) {
+    height: 300px;
+  }
+  @media screen and (max-width: 768px) {
+    height: 240px;
   }
 }
 
@@ -75,6 +78,18 @@ useHead({
     @media screen and (max-width: 1024px) {
       font-size: 24px;
       padding: 0 2rem;
+    }
+    @media screen and (max-width: 470px) {
+      font-size: 20px;
+      padding: 0 1rem;
+    }
+  }
+  .navlink.fb {
+    @media screen and (max-width: 768px) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 10px;
     }
   }
 }

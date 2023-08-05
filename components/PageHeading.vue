@@ -21,7 +21,7 @@ h1 {
     font-size: 28px;
   }
   @media screen and (max-width: 768px) {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 </style>

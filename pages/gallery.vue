@@ -105,6 +105,7 @@ section {
   &.photos {
     border: 2px solid var(--color-secondary);
     background-color: var(--banner-color);
+
     @media screen and (max-width: 768px) {
       border: none;
     }
@@ -117,26 +118,6 @@ section {
     @media screen and (max-width: 768px) {
       border: none;
     }
-
-    .column {
-      flex: 33%;
-      max-width: 400px;
-    }
-
-    @media screen and (max-width: 1024px) {
-      .column {
-        flex: 50%;
-        max-width: 50%;
-      }
-    }
-
-    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px) {
-      .column {
-        flex: 100%;
-        max-width: 100%;
-      }
-    }
   }
 }
 h2 {
@@ -144,6 +125,7 @@ h2 {
   color: var(--color-primary-bright);
   margin: 0 0 2rem;
   position: relative;
+
   &:after {
     position: absolute;
     content: "";
@@ -157,14 +139,16 @@ h2 {
 
 .image-gallery {
   display: flex;
-  /* justify-content: center; */
   flex-wrap: wrap;
   gap: 10px;
 }
 
 .image-gallery > li {
   width: 175px;
-  flex-grow: 1;
+
+  @media screen and (max-width: 460px) {
+    width: 155px;
+  }
 }
 
 .image-gallery li img {
@@ -189,6 +173,9 @@ h2 {
 
 .video-gallery > li {
   flex-basis: 270px;
+  @media screen and (max-width: 768px) {
+    width: 200px;
+  }
 }
 
 .video-gallery li iframe {
@@ -197,5 +184,8 @@ h2 {
   height: 476px;
   vertical-align: middle;
   border-radius: 5px;
+  @media screen and (max-width: 768px) {
+    height: 400px;
+  }
 }
 </style>
