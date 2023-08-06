@@ -70,6 +70,10 @@ useHead({
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 4rem 0;
+  @media screen and (max-width: 1024px) {
+    background: none;
+    padding: 2rem 0;
+  }
 }
 .container {
   max-width: var(--wrapper-width);
@@ -120,7 +124,7 @@ useHead({
 
 .page-wrapper {
   @media screen and (max-width: 1024px) {
-    padding-bottom: 8rem;
+    padding-bottom: 4rem;
   }
 }
 

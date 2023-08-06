@@ -5,6 +5,15 @@
         <td class="first" width="150">
           <div class="date-container">
             <div class="date-container__text">
+              <a
+                v-if="show.eventLink"
+                :href="show.eventLink"
+                target="_blank"
+                referrerpolicy="no-referrer"
+                class="date-container-fb-link"
+              >
+                <font-awesome-icon :icon="['fab', 'facebook']" />
+              </a>
               <span class="month">{{ show.date.month }}&nbsp; </span>
               <span class="day">{{ show.date.day }}</span>
             </div>
@@ -171,16 +180,14 @@ defineProps<{
     height: 65px;
     width: 65px;
     border-radius: 5px;
+    position: relative;
 
     @media screen and (max-width: 768px) {
-      height: 100px;
+      height: 60px;
       width: 100%;
       border-radius: 0;
     }
     @media screen and (max-width: 445px) {
-      height: 60px;
-      width: 100%;
-      border-radius: 0;
     }
     &__text {
       width: 100%;
@@ -198,13 +205,27 @@ defineProps<{
 
       .month {
         display: block;
-        font-weight: 400;
         @media screen and (max-width: 768px) {
           display: inline;
         }
       }
       .day {
         font-weight: 600;
+      }
+    }
+
+    .date-container-fb-link {
+      display: none;
+      position: absolute;
+      left: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 36px;
+      @media screen and (max-width: 768px) {
+        display: inline-block;
+      }
+      @media screen and (max-width: 768px) {
+        left: 1rem;
       }
     }
   }
@@ -232,6 +253,9 @@ td:nth-of-type(5) {
   font-size: 3rem;
   @media screen and (max-width: 1200px) {
     font-size: 2rem;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 }
 </style>

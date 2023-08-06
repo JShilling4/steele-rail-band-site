@@ -48,14 +48,14 @@ const route = useRoute();
 watch(
   () => route.path,
   () => {
-    if (windowWidth.value <= 768) showMenu.value = false;
+    if (windowWidth.value <= 1024) showMenu.value = false;
   },
   { immediate: true },
 );
 
 onMounted((): void => {
   window.addEventListener("resize", onResize);
-  if (windowWidth.value <= 768) showMenu.value = false;
+  if (windowWidth.value <= 1024) showMenu.value = false;
 });
 
 onUnmounted((): void => {
@@ -64,7 +64,9 @@ onUnmounted((): void => {
 
 function onResize(): void {
   windowWidth.value = window.innerWidth;
-  windowWidth.value >= 769 ? (showMenu.value = true) : (showMenu.value = false);
+  windowWidth.value >= 1025
+    ? (showMenu.value = true)
+    : (showMenu.value = false);
 }
 
 function toggleMenu(): void {
@@ -115,9 +117,9 @@ nav {
     margin-top: 0;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     position: absolute;
-    top: 4.55rem;
+    top: 6rem;
     background-color: var(--banner-color);
     right: 0;
     padding: 1rem 0;
@@ -145,7 +147,7 @@ nav {
     }
   }
   .navlink.fb {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       padding: 1rem 0 0;
     }
   }
@@ -163,7 +165,7 @@ nav {
   font-size: 2rem;
   color: var(--color-secondary);
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: block;
   }
   @media screen and (max-width: 430px) {

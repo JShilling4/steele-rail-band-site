@@ -57,6 +57,9 @@ a {
   @media screen and (max-width: 430px) {
     padding: 2rem 1.5rem 2rem;
   }
+  @media screen and (max-width: 375px) {
+    padding: 2rem 0.5rem 2rem;
+  }
 }
 
 .body-wrapper {
@@ -88,7 +91,9 @@ body::-webkit-scrollbar-thumb {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-
+  @media screen and (max-width: 1024px) {
+    background: none;
+  }
   @media screen and (max-width: 768px) {
     background-color: var(--bg-black);
   }
