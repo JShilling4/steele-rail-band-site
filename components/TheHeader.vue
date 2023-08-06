@@ -18,7 +18,13 @@
           <RouterLink to="/contact" class="navlink-text">Contact</RouterLink>
         </li>
         <li class="navlink fb">
-          <font-awesome-icon :icon="['fab', 'facebook']" />
+          <a
+            href="https://www.facebook.com/steelerailband"
+            noreferrer
+            target="_blank"
+          >
+            <font-awesome-icon :icon="['fab', 'facebook']" />
+          </a>
         </li>
       </ul>
       <font-awesome-icon
