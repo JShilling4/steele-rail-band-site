@@ -5,10 +5,6 @@
       <div class="container">
         <div class="content">
           <form name="contact-form" class="contactForm" method="post" netlify>
-            <!-- <p class="copy">
-              Please use this form for any questions, comments or if you would
-              like to discuss booking.
-            </p> -->
             <input type="hidden" name="form-name" value="contact-form" />
             <InputGroup>
               <FormLabel>Name</FormLabel>
