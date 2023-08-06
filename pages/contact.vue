@@ -4,8 +4,7 @@
     <div class="content-wrapper">
       <div class="container">
         <div class="content">
-          <form name="contact-form" class="contactForm" method="post" netlify>
-            <input type="hidden" name="form-name" value="contact-form" />
+          <form name="contact-form" class="contactForm" netlify>
             <InputGroup>
               <FormLabel>Name</FormLabel>
               <TextInput v-model="contactForm.name" name="name" required />
