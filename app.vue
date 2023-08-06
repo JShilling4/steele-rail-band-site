@@ -2,7 +2,7 @@
   <div class="app">
     <TheHeader v-if="currentRoute.path !== '/'" />
     <NuxtPage />
-    <!-- <TheFooter /> -->
+    <TheFooter v-if="currentRoute.path !== '/'" />
   </div>
 </template>
 
@@ -43,7 +43,7 @@ a {
 .page-wrapper {
   margin: 0 auto;
   color: #fff;
-  padding: 1rem 2rem 4rem;
+  padding: 1rem 2rem 0;
 
   @media screen and (max-width: 1024px) {
     padding-top: 2rem;
@@ -52,13 +52,13 @@ a {
     margin-top: 0;
   }
   @media screen and (max-width: 556px) {
-    padding: 2rem 2rem 4rem;
+    padding: 2rem 2rem 0;
   }
   @media screen and (max-width: 430px) {
-    padding: 2rem 1.5rem 2rem;
+    padding: 2rem 1.5rem 0;
   }
   @media screen and (max-width: 375px) {
-    padding: 2rem 0.5rem 2rem;
+    padding: 2rem 0.5rem 0;
   }
 }
 

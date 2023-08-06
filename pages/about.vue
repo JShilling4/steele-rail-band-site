@@ -14,7 +14,7 @@
         <div class="member-images">
           <div class="member-container">
             <img
-              src="@/assets/images/ken-2.jpg"
+              src="@/assets/images/ken-1.jpg"
               alt="Ken on lead & backup vocals - Steele Rail Band"
               class="member-image"
             />
@@ -152,6 +152,7 @@ useHead({
 
   @media screen and (max-width: 768px) {
     margin-top: 0;
+    margin-bottom: 3rem;
   }
 
   .member-image {
@@ -162,15 +163,17 @@ useHead({
   }
   .member-name {
     margin-top: 1rem;
-    text-align: center;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 0;
+    }
     span {
       font-family: "Yesteryear";
       font-size: 28px;
       color: var(--color-primary-bright);
       background-color: var(--bg-black);
       border-radius: 10px;
-      padding: 10px;
-      width: 5.5rem;
+      padding: 5px 10px;
       display: inline-block;
     }
   }
