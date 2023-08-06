@@ -4,7 +4,13 @@
     <div class="content-wrapper">
       <div class="container">
         <div class="content">
-          <form name="contacts-form" class="contactForm" method="post" netlify>
+          <form
+            name="contacts-form"
+            class="contactForm"
+            action="/"
+            method="POST"
+            data-netlify="true"
+          >
             <input type="hidden" name="form-name" value="contacts-form" />
             <InputGroup>
               <FormLabel>Name</FormLabel>
