@@ -27,7 +27,8 @@ button {
   padding: 1rem;
   background-color: transparent;
   border: 2px solid var(--color-secondary);
-  color: var(--color-primary-bright);
+  /* color: var(--color-primary-bright); */
+  color: white;
   outline: none;
   min-width: 11rem;
   border-radius: 10px;

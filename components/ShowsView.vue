@@ -93,10 +93,6 @@ const shows = [
 </script>
 
 <style lang="scss" scoped>
-:deep(h1) {
-  color: var(--banner-color);
-}
-
 .table-wrapper {
   margin: 1rem auto 0;
   color: #fff;
@@ -115,14 +111,14 @@ const shows = [
   display: flex;
   justify-content: center;
   overflow-x: auto;
-  padding: 0 3rem 6rem;
+  padding: 0 3rem;
 
   @media screen and (max-width: 768px) {
-    padding: 0 0 4rem;
+    padding: 0 0 0;
     display: block;
   }
   @media screen and (max-width: 430px) {
-    padding: 0 1rem 4rem;
+    padding: 0 1rem;
   }
 }
 </style>

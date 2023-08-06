@@ -91,7 +91,7 @@ function toggleMenu(): void {
 }
 
 .logo {
-  height: 200px;
+  height: 150px;
 
   @media screen and (max-width: 1024px) {
     height: 100px;

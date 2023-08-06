@@ -102,15 +102,15 @@ section {
     padding: 0;
   }
 
-  &.photos {
+  /* &.photos {
     border: 2px solid var(--color-secondary);
     background-color: var(--banner-color);
 
     @media screen and (max-width: 768px) {
       border: none;
     }
-  }
-  &.videos {
+  } */
+  /* &.videos {
     border: 2px solid var(--color-secondary);
     background-color: var(--banner-color);
     color: var(--color-primary);
@@ -118,7 +118,7 @@ section {
     @media screen and (max-width: 768px) {
       border: none;
     }
-  }
+  } */
 }
 h2 {
   font-weight: 500;

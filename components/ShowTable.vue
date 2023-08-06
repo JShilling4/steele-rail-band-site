@@ -166,7 +166,7 @@ defineProps<{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-primary);
+    background-image: linear-gradient(rgb(234, 6, 6), var(--color-primary));
     font-family: Roboto, sans-serif;
     height: 65px;
     width: 65px;
@@ -174,6 +174,11 @@ defineProps<{
 
     @media screen and (max-width: 768px) {
       height: 100px;
+      width: 100%;
+      border-radius: 0;
+    }
+    @media screen and (max-width: 445px) {
+      height: 60px;
       width: 100%;
       border-radius: 0;
     }

@@ -1,29 +1,31 @@
 <template>
   <div class="page-wrapper">
     <PageHeading>Contact Us</PageHeading>
-    <div class="container">
-      <div class="content">
-        <form name="contact-form" class="contactForm" method="post" netlify>
-          <!-- <p class="copy">
-            Please use this form for any questions, comments or if you would
-            like to discuss booking.
-          </p> -->
-          <input type="hidden" name="form-name" value="contact-form" />
-          <InputGroup>
-            <FormLabel>Name</FormLabel>
-            <TextInput v-model="contactForm.name" name="name" required />
-          </InputGroup>
-          <InputGroup>
-            <FormLabel>Email or phone number</FormLabel>
-            <TextInput v-model="contactForm.email" name="email" required />
-          </InputGroup>
-          <InputGroup>
-            <FormLabel>Message</FormLabel>
-            <TextBox v-model="contactForm.message" name="message" required />
-          </InputGroup>
+    <div class="content-wrapper">
+      <div class="container">
+        <div class="content">
+          <form name="contact-form" class="contactForm" method="post" netlify>
+            <!-- <p class="copy">
+              Please use this form for any questions, comments or if you would
+              like to discuss booking.
+            </p> -->
+            <input type="hidden" name="form-name" value="contact-form" />
+            <InputGroup>
+              <FormLabel>Name</FormLabel>
+              <TextInput v-model="contactForm.name" name="name" required />
+            </InputGroup>
+            <InputGroup>
+              <FormLabel>Email or phone number</FormLabel>
+              <TextInput v-model="contactForm.email" name="email" required />
+            </InputGroup>
+            <InputGroup>
+              <FormLabel>Message</FormLabel>
+              <TextBox v-model="contactForm.message" name="message" required />
+            </InputGroup>
 
-          <AppButton type="submit" class="primary">Send Message</AppButton>
-        </form>
+            <AppButton type="submit" class="primary">Send Message</AppButton>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -61,12 +63,14 @@ useHead({
 </script>
 
 <style lang="scss" scoped>
-h2 {
-  margin-top: 10rem;
-  text-align: center;
-  color: var(--color-primary);
+.content-wrapper {
+  background-image: url("/assets/images/page-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 4rem 0;
 }
-
 .container {
   max-width: var(--wrapper-width);
   margin: 0 auto;
@@ -106,7 +110,7 @@ h2 {
     @media screen and (max-width: 1200px) {
       width: 70%;
       order: 2;
-      padding: 0;
+      padding: 0 1rem;
     }
     @media screen and (max-width: 556px) {
       width: 100%;

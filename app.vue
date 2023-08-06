@@ -84,7 +84,10 @@ body::-webkit-scrollbar-thumb {
 
 .view-container {
   padding: 2rem 0;
-  background-color: var(--color-primary);
+  background-image: url("@/assets/images/page-bg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 
   @media screen and (max-width: 768px) {
     background-color: var(--bg-black);
