@@ -1,13 +1,88 @@
 <template>
   <div class="page-wrapper">
-    <PageHeading>About</PageHeading>
-
-    <div class="content-container">Coming soon...</div>
+    <PageHeading>About The Band</PageHeading>
+    <div class="hero-container"></div>
+    <div class="content-container">
+      <p class="copy">
+        The Steele Rail Band is a variety band covering music that spans several
+        decades in the style of country, southern rock, alternative, classic
+        rock and blues. We've put together a show with an emphasis on getting
+        people dancing, singing along and just having a great time. We are
+        available to play venues of all sizes including fairs/festivals,
+        campgrounds, clubs/bars, casinos & private parties.
+      </p>
+      <div class="member-images">
+        <div class="member-container">
+          <img
+            src="@/assets/images/ken-1.jpg"
+            alt="Ken on lead & backup vocals - Steele Rail Band"
+            class="member-image"
+          />
+          <p class="member-name"><span>Ken</span> - Lead Vocals</p>
+        </div>
+        <div class="member-container">
+          <img
+            src="@/assets/images/amber-1.jpg"
+            alt="Amber on lead vocals - Steele Rail Band"
+            class="member-image"
+          />
+          <p class="member-name"><span>Amber</span> - Lead Vocals</p>
+        </div>
+        <div class="member-container">
+          <img
+            src="@/assets/images/randy-1.jpg"
+            alt="Randy on bass & backup vocals - Steele Rail Band"
+            class="member-image"
+          />
+          <p class="member-name"><span>Randy</span> - Bass/Vocals</p>
+        </div>
+        <div class="member-container">
+          <img
+            src="@/assets/images/mike-1.jpg"
+            alt="Mike on drums & vocals - Steele Rail Band"
+            class="member-image"
+          />
+          <p class="member-name"><span>Mike</span> - Drums/Vocals</p>
+        </div>
+        <div class="member-container">
+          <img
+            src="@/assets/images/justin-1.jpg"
+            alt="Justin on lead guitar - Steele Rail Band"
+            class="member-image"
+          />
+          <p class="member-name"><span>Justin</span> - Lead Guitar</p>
+        </div>
+        <div class="member-container">
+          <img
+            src="@/assets/images/kevin-1.jpg"
+            alt="Kevin on rhythm guitar - Steele Rail Band"
+            class="member-image"
+          />
+          <p class="member-name"><span>Kevin</span> - Rhythm Guitar</p>
+        </div>
+        <div class="member-container">
+          <img
+            src="@/assets/images/jim-1.jpg"
+            alt="Jim on banjo and keyboard - Steele Rail Band"
+            class="member-image"
+          />
+          <p class="member-name"><span>Jim</span> - Keyboard/Banjo</p>
+        </div>
+        <div class="member-container">
+          <img
+            src="@/assets/images/brent-1.jpg"
+            alt="Brent on sound & vocals - Steele Rail Band"
+            class="member-image"
+          />
+          <p class="member-name"><span>Brent</span> - Sound Engineer</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import PageHeading from "@/components/PageHeading.vue";
+// import PageHeading from "@/components/PageHeading.vue";
 
 const title = ref("Steele Rail Band - About");
 const description = ref("");
@@ -28,56 +103,57 @@ useHead({
   max-width: 1400px;
   margin: 0 auto;
 }
-.top-copy {
-  line-height: 2;
-  font-weight: 300;
-  margin-bottom: 3rem;
-  color: rgba(255, 255, 255, 0.856);
 
-  @media screen and (max-width: 430px) {
-    margin-bottom: 1rem;
-  }
-}
-.hero-container {
-  float: left;
-  margin: 0 2rem 2rem 0;
-  height: 402px;
-  img {
-    max-height: 100%;
-    max-width: 100%;
-  }
+/* .hero-container {
+  background-image: url("/assets/images/stage-pan-1.jpg");
+  background-size: cover;
+  background-position: center -220px;
+  background-repeat: no-repeat;
+  height: 15%;
+  width: 100%;
+} */
+
+.copy {
+  font-family: Roboto, sans-serif;
+  margin: 2rem auto;
+  max-width: 80%;
+  line-height: 2;
+  font-size: 20px;
+  font-weight: 300;
 
   @media screen and (max-width: 768px) {
-    float: none;
-    height: initial;
-    margin: 0;
+    font-size: 18px;
+    max-width: initial;
+  }
+  @media screen and (max-width: 540px) {
+    font-size: 16px;
+    max-width: initial;
   }
 }
-.copy-container {
-  margin-top: 3rem;
-  font-size: 17px;
-  line-height: 1.5;
 
-  @media screen and (max-width: 430px) {
-    margin-top: 1rem;
+.member-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.member-container {
+  margin: 2rem 1rem;
+
+  .member-image {
+    border-radius: 50%;
+    border: 2px solid var(--color-secondary);
+    height: 250px;
+    width: 250px;
   }
-
-  .point {
-    margin-bottom: 3rem;
-
-    .question {
-      color: var(--color-primary);
-      font-weight: 500;
-      letter-spacing: 1px;
-      margin-bottom: 1rem;
-      font-weight: 500;
-      font-size: 20px;
-    }
-
-    .answer {
-      font-weight: 300;
-      line-height: 1.75;
-      color: var(--copy-white-faded);
+  .member-name {
+    margin-top: 1rem;
+    text-align: center;
+    span {
+      font-family: "Yesteryear";
+      font-size: 28px;
+      color: var(--color-primary-bright);
     }
   }
 }

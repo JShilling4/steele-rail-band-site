@@ -144,6 +144,11 @@ nav {
       padding: 1rem 1.5rem;
     }
   }
+  .navlink.fb {
+    @media screen and (max-width: 768px) {
+      padding: 1rem 0 0;
+    }
+  }
 }
 
 .router-link-active {
@@ -162,8 +167,7 @@ nav {
     display: block;
   }
   @media screen and (max-width: 430px) {
-    right: 15px;
-    font-size: 1.5rem;
+    right: 20px;
   }
 }
 </style>

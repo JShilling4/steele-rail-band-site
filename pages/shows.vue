@@ -1,6 +1,6 @@
 <template>
   <div class="page-wrapper">
-    <PageHeading>Upcoming {{ new Date().getFullYear() }} Shows</PageHeading>
+    <PageHeading>Upcoming Shows</PageHeading>
 
     <div class="content-container">
       <ShowsView />
