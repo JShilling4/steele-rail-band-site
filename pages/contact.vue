@@ -3,6 +3,11 @@
     <PageHeading>Contact Us</PageHeading>
     <div class="content-wrapper">
       <div class="container">
+        <p class="copy">
+          If you have questions, comments, feedback or would like to discuss
+          booking us at your venue or private event, please send us a message
+          here and we will get back to you as soon as we are able.
+        </p>
         <div class="content">
           <form name="contacts-form" class="contactForm" method="POST" netlify>
             <input type="hidden" name="form-name" value="contacts-form" />
@@ -80,9 +85,14 @@ useHead({
     line-height: 1.75;
     font-size: 18px;
     color: var(--copy-white-faded);
+    padding: 0 8rem 4rem;
+    @media screen and (max-width: 1200px) {
+      width: 70%;
+      padding: 0 1rem;
+    }
 
     @media screen and (max-width: 556px) {
-      width: 98%;
+      width: 100%;
       font-size: 15px;
     }
 
