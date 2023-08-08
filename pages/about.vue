@@ -4,12 +4,13 @@
     <div class="content-wrapper">
       <div class="content-container">
         <p class="copy">
-          The Steele Rail Band is a variety band covering music that spans
-          several decades in the style of country, southern rock, alternative,
-          classic rock and blues. We've put together a show with an emphasis on
-          dancing, singing along and just having a great time. We are available
-          to play venues of all sizes including fairs/festivals, campgrounds,
-          clubs/bars, casinos & private parties.
+          The Steele Rail Band is a variety band that covers music spanning
+          several decades in many different styles - such as country, southern
+          rock, alternative, classic rock and blues. Whether you feel like
+          dancing, singing along, or just enjoying the music and atmosphere,
+          we've put together a show that has you covered. We play venues of all
+          sizes including fairs/festivals, campgrounds, clubs/bars, casinos &
+          private parties.
         </p>
         <div class="member-images">
           <div class="member-container">
