@@ -34,8 +34,7 @@ export default defineNuxtConfig({
         },
         {
           name: "keywords",
-          content:
-            "music, band, country music, rock music, blues, live music near me, dancing",
+          content: "music, band, country, rock, blues, indiana, dancing",
         },
       ],
       script: [],

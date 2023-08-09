@@ -89,6 +89,45 @@ const shows = [
     location: "",
     eventLink: "https://www.facebook.com/events/558812119439267",
   },
+  {
+    date: {
+      month: "Oct",
+      day: "27th",
+    },
+    venue: {
+      name: "The Post",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "9pm - 1am",
+    location: "Pierceton, IN",
+    eventLink: "https://www.facebook.com/events/856344468941146",
+  },
+  {
+    date: {
+      month: "Oct",
+      day: "28th",
+    },
+    venue: {
+      name: "The Post",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "9pm - 1am",
+    location: "Pierceton, IN",
+    eventLink: "https://www.facebook.com/events/859098571996088",
+  },
+  {
+    date: {
+      month: "Nov",
+      day: "4th",
+    },
+    venue: {
+      name: "Wabash Elk's",
+      website: "https://www.facebook.com/ELKS471",
+    },
+    time: "8pm - 12am",
+    location: "Wabash, IN",
+    eventLink: "https://www.facebook.com/events/916077502747986",
+  },
 ];
 </script>
 
