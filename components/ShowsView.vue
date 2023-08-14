@@ -13,19 +13,6 @@ const shows = [
   {
     date: {
       month: "Aug",
-      day: "12th",
-    },
-    venue: {
-      name: "Rack N Helens Bar & Grill",
-      website: "https://www.facebook.com/rackandhelens",
-    },
-    time: "10pm - 1am",
-    location: "New Haven, IN",
-    eventLink: "https://www.facebook.com/events/600631315156465/",
-  },
-  {
-    date: {
-      month: "Aug",
       day: "19th",
     },
     venue: {
@@ -127,6 +114,32 @@ const shows = [
     time: "8pm - 12am",
     location: "Wabash, IN",
     eventLink: "https://www.facebook.com/events/916077502747986",
+  },
+  {
+    date: {
+      month: "Nov",
+      day: "11th",
+    },
+    venue: {
+      name: "Goshen Moose (Members only)",
+      website: "https://www.facebook.com/goshenmoose",
+    },
+    time: "7pm - 10pm",
+    location: "Goshen, IN",
+    eventLink: "https://www.facebook.com/events/698778365301114",
+  },
+  {
+    date: {
+      month: "Nov",
+      day: "18th",
+    },
+    venue: {
+      name: "Timber Ridge Club 250",
+      website: "https://www.facebook.com/timberridgegc",
+    },
+    time: "8pm - 11pm",
+    location: "Bluffton, IN",
+    eventLink: "https://www.facebook.com/events/560251752669730",
   },
 ];
 </script>
