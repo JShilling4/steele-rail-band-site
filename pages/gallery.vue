@@ -17,6 +17,7 @@
         <div class="row">
           <ul class="video-gallery">
             <li>
+              <p class="title">The Middle</p>
               <iframe
                 src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F6424770004236787%2F&show_text=false&width=267&t=0"
                 width="267"
@@ -30,8 +31,9 @@
               ></iframe>
             </li>
             <li>
+              <p class="title">Shine</p>
               <iframe
-                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F827821695284020%2F&show_text=false&width=267&t=0"
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F1338523830394774%2F&show_text=false&width=267&t=0"
                 width="267"
                 height="476"
                 style="border: none; overflow: hidden"
@@ -43,6 +45,7 @@
               ></iframe>
             </li>
             <li>
+              <p class="title">Drink In My Hand</p>
               <iframe
                 src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F2281168242093724%2F&show_text=false&width=267&t=0"
                 width="267"
@@ -56,8 +59,37 @@
               ></iframe>
             </li>
             <li>
+              <p class="title">Heart On Fire</p>
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F1028770155237605%2F&show_text=false&width=267&t=0"
+                width="267"
+                height="476"
+                style="border: none; overflow: hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowFullScreen="true"
+              ></iframe>
+            </li>
+            <li>
+              <p class="title">Stop Draggin' My Heart</p>
               <iframe
                 src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F939100403817257%2F&show_text=false&width=267&t=0"
+                width="267"
+                height="476"
+                style="border: none; overflow: hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowFullScreen="true"
+              ></iframe>
+            </li>
+            <li>
+              <p class="title">Seven Nation Army</p>
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F675182124640035%2F&show_text=false&width=267&t=0"
                 width="267"
                 height="476"
                 style="border: none; overflow: hidden"
@@ -78,7 +110,7 @@
 <script setup lang="ts">
 const title = ref("Steele Rail Band - Gallery");
 const description = ref("Browse Steele Rail Band photos and videos.");
-const imageCount = 12;
+const imageCount = 13;
 
 useHead({
   title,
@@ -154,6 +186,10 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+
+  .title {
+    margin-bottom: 4px;
+  }
 }
 
 .video-gallery > li {
