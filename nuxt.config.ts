@@ -13,7 +13,7 @@ export default defineNuxtConfig({
         },
         {
           property: "og:title",
-          content: "Ride The Rail | Steele Rail Band",
+          content: "Steele Rail Band | Ride the Rail",
         },
         {
           property: "og:url",

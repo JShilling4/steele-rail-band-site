@@ -30,7 +30,9 @@
 
 <script setup lang="ts">
 const title = ref("Steele Rail Band");
-const description = ref("");
+const description = ref(
+  "The Steele Rail Band is a variety band that covers music spanning several decades in many different styles - such as country, southern rock, alternative, classic rock and blues.",
+);
 
 useHead({
   title,

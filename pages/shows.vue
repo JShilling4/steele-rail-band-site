@@ -11,8 +11,10 @@
 <script setup lang="ts">
 import PageHeading from "@/components/PageHeading.vue";
 
-const title = ref("Steele Rail Band - About");
-const description = ref("");
+const title = ref("Steele Rail Band - Shows");
+const description = ref(
+  "Steele Rail Band upcoming show venues, times and locations.",
+);
 
 useHead({
   title,

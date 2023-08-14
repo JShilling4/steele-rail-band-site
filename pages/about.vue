@@ -84,10 +84,10 @@
 </template>
 
 <script setup lang="ts">
-// import PageHeading from "@/components/PageHeading.vue";
-
 const title = ref("Steele Rail Band - About");
-const description = ref("");
+const description = ref(
+  "About the Steele Rail Band. Member lineup and other band information.",
+);
 
 useHead({
   title,
