@@ -17,7 +17,7 @@ export default defineNuxtConfig({
         },
         {
           property: "og:url",
-          content: "https://www.steelerailband.com",
+          content: "https://steelerailband.com",
         },
         {
           property: "og:site_name",
@@ -25,7 +25,7 @@ export default defineNuxtConfig({
         },
         {
           property: "og:image",
-          content: "https://www.steelerailband.com/og-image.jpg",
+          content: "https://steelerailband.com/og-image.jpg",
         },
         {
           name: "description",
@@ -42,8 +42,9 @@ export default defineNuxtConfig({
       link: [
         {
           rel: "canonical",
-          href: "https://www.steelerailband.com",
+          href: "https://steelerailband.com",
         },
+        { rel: "icon", type: "image/png", href: "/favicon.ico" },
       ],
       title: "Steele Rail Band | Ride The Rail",
       noscript: [
