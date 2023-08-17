@@ -141,6 +141,97 @@ const shows = [
     location: "Bluffton, IN",
     eventLink: "https://www.facebook.com/events/560251752669730",
   },
+  {
+    date: {
+      month: "Nov",
+      day: "22nd",
+    },
+    venue: {
+      name: "The Post",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "8pm - 12am",
+    location: "Pierceton, IN",
+    eventLink: "https://www.facebook.com/events/658103672772137",
+  },
+  {
+    date: {
+      month: "Nov",
+      day: "24th",
+    },
+    venue: {
+      name: "The Post",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "8pm - 12am",
+    location: "Pierceton, IN",
+    eventLink: "https://www.facebook.com/events/893777268289362",
+  },
+  {
+    date: {
+      month: "Nov",
+      day: "25th",
+    },
+    venue: {
+      name: "The Post",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "8pm - 12am",
+    location: "Pierceton, IN",
+    eventLink: "https://www.facebook.com/events/968002007937774",
+  },
+  {
+    date: {
+      month: "Dec",
+      day: "8th",
+    },
+    venue: {
+      name: "Harry's Tap & Grill",
+      website: "https://www.facebook.com/harrystapandgrill",
+    },
+    time: "7pm - 11pm",
+    location: "Milford, IN",
+    eventLink: "https://www.facebook.com/events/801133704759530",
+  },
+  {
+    date: {
+      month: "Dec",
+      day: "9th",
+    },
+    venue: {
+      name: "Wabash Eagles",
+      website: "https://www.facebook.com/profile.php?id=100048562394841",
+    },
+    time: "8pm - 12am",
+    location: "Wabash, IN",
+    eventLink: "https://www.facebook.com/events/541916254654633",
+  },
+  {
+    date: {
+      month: "Dec",
+      day: "30th",
+    },
+    venue: {
+      name: "The Post",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "8pm - 12am",
+    location: "Pierceton, IN",
+    eventLink: "https://www.facebook.com/events/527900555958079",
+  },
+  {
+    date: {
+      month: "Dec",
+      day: "31th",
+    },
+    venue: {
+      name: "The Post (New Years Eve Party)",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "9pm - 1am",
+    location: "Pierceton, IN",
+    eventLink: "https://www.facebook.com/events/835356087749439",
+  },
 ];
 </script>
 
