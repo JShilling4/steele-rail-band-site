@@ -79,6 +79,19 @@ const shows = [
   {
     date: {
       month: "Oct",
+      day: "14th",
+    },
+    venue: {
+      name: "Rochester VFW",
+      website: null,
+    },
+    time: "6pm - 10pm",
+    location: "Rochester, IN",
+    eventLink: "https://www.facebook.com/events/1431068650793216",
+  },
+  {
+    date: {
+      month: "Oct",
       day: "27th",
     },
     venue: {
