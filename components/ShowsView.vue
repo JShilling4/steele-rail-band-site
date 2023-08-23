@@ -12,19 +12,6 @@
 const shows = [
   {
     date: {
-      month: "Aug",
-      day: "19th",
-    },
-    venue: {
-      name: "Private Party",
-      website: null,
-    },
-    time: "7pm - 10pm",
-    location: "",
-    eventLink: "https://www.facebook.com/events/8539128622827992",
-  },
-  {
-    date: {
       month: "Sep",
       day: "2nd",
     },
