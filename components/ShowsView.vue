@@ -10,19 +10,19 @@
 
 <script setup lang="ts">
 const shows = [
-  {
-    date: {
-      month: "Sep",
-      day: "2nd",
-    },
-    venue: {
-      name: "Luken's Lake",
-      website: "https://www.facebook.com/pages/Lukens-Lake/146045522082063",
-    },
-    time: "8pm - 11pm",
-    location: "Roann, IN",
-    eventLink: "https://www.facebook.com/events/8539128622827992",
-  },
+  // {
+  //   date: {
+  //     month: "Sep",
+  //     day: "2nd",
+  //   },
+  //   venue: {
+  //     name: "Luken's Lake",
+  //     website: "https://www.facebook.com/pages/Lukens-Lake/146045522082063",
+  //   },
+  //   time: "8pm - 11pm",
+  //   location: "Roann, IN",
+  //   eventLink: "https://www.facebook.com/events/8539128622827992",
+  // },
   {
     date: {
       month: "Sep",
