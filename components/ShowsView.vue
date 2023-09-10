@@ -23,20 +23,20 @@ const shows = [
   //   location: "Roann, IN",
   //   eventLink: "https://www.facebook.com/events/8539128622827992",
   // },
-  {
-    date: {
-      month: "Sep",
-      day: "9th",
-    },
-    venue: {
-      name: "Downtown Huntington Days",
-      website: null,
-    },
-    time: "6:30pm - 8:30pm",
-    location: "Huntington, IN",
-    eventLink:
-      "https://www.facebook.com/events/1194016611491710?active_tab=about",
-  },
+  // {
+  //   date: {
+  //     month: "Sep",
+  //     day: "9th",
+  //   },
+  //   venue: {
+  //     name: "Downtown Huntington Days",
+  //     website: null,
+  //   },
+  //   time: "6:30pm - 8:30pm",
+  //   location: "Huntington, IN",
+  //   eventLink:
+  //     "https://www.facebook.com/events/1194016611491710?active_tab=about",
+  // },
   {
     date: {
       month: "Sep",
