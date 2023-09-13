@@ -31,9 +31,37 @@
               ></iframe>
             </li>
             <li>
-              <p class="title">Shine</p>
+              <p class="title">Gunpowder & Lead</p>
               <iframe
-                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F1338523830394774%2F&show_text=false&width=267&t=0"
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F299489032548846%2F&show_text=false&width=267&t=0"
+                width="267"
+                height="476"
+                style="border: none; overflow: hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowFullScreen="true"
+              ></iframe>
+            </li>
+            <li>
+              <p class="title">Down In Mississippi</p>
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F546211810900402%2F&show_text=false&width=267&t=0"
+                width="267"
+                height="476"
+                style="border: none; overflow: hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowFullScreen="true"
+              ></iframe>
+            </li>
+            <li>
+              <p class="title">Tush</p>
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F1523048004766110%2F&show_text=false&width=267&t=0"
                 width="267"
                 height="476"
                 style="border: none; overflow: hidden"
@@ -90,6 +118,20 @@
               <p class="title">Seven Nation Army</p>
               <iframe
                 src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F675182124640035%2F&show_text=false&width=267&t=0"
+                width="267"
+                height="476"
+                style="border: none; overflow: hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowFullScreen="true"
+              ></iframe>
+            </li>
+            <li>
+              <p class="title">Play That Funky Music</p>
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F754867566414024%2F&show_text=false&width=267&t=0"
                 width="267"
                 height="476"
                 style="border: none; overflow: hidden"
