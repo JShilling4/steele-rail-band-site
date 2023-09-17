@@ -37,32 +37,32 @@ const shows = [
   //   eventLink:
   //     "https://www.facebook.com/events/1194016611491710?active_tab=about",
   // },
-  {
-    date: {
-      month: "Sep",
-      day: "15th",
-    },
-    venue: {
-      name: "Knockin' Boots Saloon",
-      website: "https://facebook.com/knockinbootssaloon",
-    },
-    time: "9pm - 1am",
-    location: "Fort Wayne, IN",
-    eventLink: "https://www.facebook.com/events/1005220330500330",
-  },
-  {
-    date: {
-      month: "Sep",
-      day: "16th",
-    },
-    venue: {
-      name: "Private Party",
-      website: null,
-    },
-    time: "9pm - 12am",
-    location: "",
-    eventLink: "https://www.facebook.com/events/558812119439267",
-  },
+  // {
+  //   date: {
+  //     month: "Sep",
+  //     day: "15th",
+  //   },
+  //   venue: {
+  //     name: "Knockin' Boots Saloon",
+  //     website: "https://facebook.com/knockinbootssaloon",
+  //   },
+  //   time: "9pm - 1am",
+  //   location: "Fort Wayne, IN",
+  //   eventLink: "https://www.facebook.com/events/1005220330500330",
+  // },
+  // {
+  //   date: {
+  //     month: "Sep",
+  //     day: "16th",
+  //   },
+  //   venue: {
+  //     name: "Private Party",
+  //     website: null,
+  //   },
+  //   time: "9pm - 12am",
+  //   location: "",
+  //   eventLink: "https://www.facebook.com/events/558812119439267",
+  // },
   {
     date: {
       month: "Oct",
