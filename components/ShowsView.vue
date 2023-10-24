@@ -1,5 +1,5 @@
 <template>
-  <div class="view-container">
+  <div class="view-container --with-bg">
     <div class="shows-container">
       <div class="table-wrapper">
         <ShowTable v-for="(show, i) in shows" :key="i" :show="show" />

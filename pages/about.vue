@@ -1,17 +1,16 @@
 <template>
   <div class="page-wrapper">
     <PageHeading>About The Band</PageHeading>
+    <p class="copy">
+      The Steele Rail Band is a country band that covers music spanning several
+      decades. In addition to country, we sprinkle in some southern rock,
+      alternative, classic rock and blues. If you feel like dancing, singing
+      along or just enjoying the music and atmosphere, we've put together a show
+      that has you covered. We play venues of all sizes including
+      fairs/festivals, campgrounds, clubs/bars, casinos & private parties.
+    </p>
     <div class="content-wrapper">
       <div class="content-container">
-        <p class="copy">
-          The Steele Rail Band is a country-leaning variety band that covers
-          music spanning several decades in many styles. In addition to country,
-          we play southern rock, alternative, classic rock and blues. Whether
-          you feel like dancing, singing along, or just enjoying the music and
-          atmosphere, we've put together a show that has you covered. We play
-          venues of all sizes including fairs/festivals, campgrounds,
-          clubs/bars, casinos & private parties.
-        </p>
         <div class="member-images">
           <div class="member-container">
             <img
@@ -67,7 +66,7 @@
               alt="Jim on banjo and keyboard - Steele Rail Band"
               class="member-image"
             />
-            <p class="member-name"><span>Jim</span> Keyboard/Banjo</p>
+            <p class="member-name"><span>Jim</span> Keys/Banjo/Mandolin</p>
           </div>
           <div class="member-container">
             <img
@@ -122,17 +121,19 @@ useHead({
 
 .copy {
   font-family: Roboto, sans-serif;
-  margin: 0 auto;
-  max-width: 85%;
+  max-width: 1400px;
   line-height: 2;
   font-size: 20px;
   font-weight: 300;
-  margin-bottom: 3rem;
-  padding: 0 1rem;
+  margin: 0 auto 3rem;
+  padding: 0 4rem;
+  text-align: center;
 
   @media screen and (max-width: 768px) {
     font-size: 18px;
     max-width: initial;
+    padding: 2rem 0;
+    margin-bottom: 0;
   }
   @media screen and (max-width: 540px) {
     font-size: 16px;
@@ -146,11 +147,11 @@ useHead({
   justify-content: center;
   max-width: 90%;
   gap: 15px;
-  margin: 0 auto;
+  margin: 0 auto 3rem;
   border-radius: 40px;
 }
 .member-container {
-  margin: 2rem 1rem;
+  margin: 2rem 1rem 4rem;
   height: 300px;
   width: 250px;
 

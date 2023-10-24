@@ -87,18 +87,22 @@ body::-webkit-scrollbar-thumb {
 
 .view-container {
   padding: 2rem 0;
-  background-image: url("@/assets/images/page-bg.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  @media screen and (max-width: 1024px) {
-    background: none;
-  }
-  @media screen and (max-width: 768px) {
-    background-color: var(--bg-black);
-  }
+
   @media screen and (max-width: 460px) {
     padding-top: 1rem;
+  }
+
+  &.--with-bg {
+    background-image: url("@/assets/images/page-bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    @media screen and (max-width: 1024px) {
+      background: none;
+    }
+    @media screen and (max-width: 768px) {
+      background-color: var(--bg-black);
+    }
   }
 }
 
