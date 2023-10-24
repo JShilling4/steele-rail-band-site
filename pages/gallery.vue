@@ -152,7 +152,7 @@
 <script setup lang="ts">
 const title = ref("Steele Rail Band - Gallery");
 const description = ref("Browse Steele Rail Band photos and videos.");
-const imageCount = 13;
+const imageCount = 29;
 
 useHead({
   title,
@@ -219,8 +219,8 @@ h2 {
 .image-gallery li img {
   object-fit: cover;
   max-width: 100%;
-  height: auto;
-  vertical-align: middle;
+  /* height: auto; */
+  /* vertical-align: middle; */
   border-radius: 5px;
 }
 

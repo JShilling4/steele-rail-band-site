@@ -145,11 +145,14 @@ useHead({
   flex-wrap: wrap;
   justify-content: center;
   max-width: 90%;
+  gap: 15px;
   margin: 0 auto;
   border-radius: 40px;
 }
 .member-container {
   margin: 2rem 1rem;
+  height: 300px;
+  width: 250px;
 
   @media screen and (max-width: 768px) {
     margin-top: 0;
@@ -159,8 +162,10 @@ useHead({
   .member-image {
     border-radius: 10px;
     border: 2px solid var(--color-secondary);
-    height: 300px;
-    width: 250px;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    object-position: top;
   }
   .member-name {
     margin-top: 1rem;
