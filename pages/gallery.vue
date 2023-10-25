@@ -154,28 +154,37 @@ h2 {
   }
 }
 
+.photos {
+  @media screen and (max-width: 768px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .image-gallery {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
 
   & > li {
-    width: 16%;
+    width: 250px;
+    height: 250px;
 
-    @media screen and (max-width: 1024px) {
-      width: 23%;
-    }
     @media screen and (max-width: 768px) {
-      width: 30%;
+      width: 200px;
+      height: 200px;
     }
 
     @media screen and (max-width: 540px) {
-      width: 48%;
+      width: 150px;
+      height: 150px;
     }
 
     img {
       object-fit: cover;
-      max-width: 100%;
+      object-position: top;
+      width: 100%;
+      height: 100%;
       border-radius: 5px;
     }
   }
