@@ -17,7 +17,7 @@ export default defineNuxtConfig({
         },
         {
           property: "og:url",
-          content: "https://steelerailband.com",
+          content: "https://www.steelerailband.com",
         },
         {
           property: "og:site_name",
@@ -30,11 +30,11 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "The Steele Rail Band is a variety band that covers music spanning several decades in many different styles - such as country, southern rock, alternative, classic rock and blues.",
+            "The Steele Rail Band is a country band based out of Northern Indiana that covers music spanning several decades. In addition to country, we sprinkle in some southern rock, alternative, classic rock and blues.",
         },
         {
           name: "keywords",
-          content: "music, band, country, rock, blues, indiana, dancing",
+          content: "music, band, country, rock, blues, indiana, dancing, live",
         },
       ],
       script: [],
@@ -42,7 +42,7 @@ export default defineNuxtConfig({
       link: [
         {
           rel: "canonical",
-          href: "https://steelerailband.com",
+          href: "https://www.steelerailband.com",
         },
         { rel: "icon", type: "image/png", href: "/favicon.ico" },
       ],
