@@ -109,7 +109,7 @@ const fbVideos = [
   },
 ];
 
-const activeTab = ref("videos");
+const activeTab = ref("photos");
 
 useHead({
   title,
@@ -130,9 +130,6 @@ section {
 
   @media screen and (max-width: 1024px) {
     margin-top: 0;
-  }
-  @media screen and (max-width: 768px) {
-    padding: 0;
   }
 }
 h2 {
@@ -156,26 +153,30 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 15px;
-  padding: 4rem 0;
 
+  /* @media screen and (max-width: 430px) {
+    padding: 4rem 0;
+  } */
   .tab {
     font-family: Roboto;
     font-size: 20px;
     color: white;
-    font-weight: 700;
+    font-weight: 300;
     letter-spacing: 2px;
     border-radius: 10px;
     padding: 1rem;
     border: 1px solid white;
     cursor: pointer;
 
+    @media screen and (max-width: 1024px) {
+      padding: 0.5rem;
+      font-size: 16px;
+    }
+
     &.--active {
       background-color: white;
       color: black;
-    }
-
-    @media screen and (max-width: 768px) {
-      font-size: 16px;
+      font-weight: 500;
     }
   }
 }
@@ -221,6 +222,7 @@ h2 {
 
   & > li {
     flex-basis: 270px;
+
     @media screen and (max-width: 768px) {
       width: 200px;
     }

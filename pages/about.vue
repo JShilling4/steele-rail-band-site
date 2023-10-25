@@ -106,12 +106,13 @@ useHead({
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 4rem 0;
+  padding: 2rem 0;
+
   @media screen and (max-width: 1024px) {
     background: none;
   }
   @media screen and (max-width: 768px) {
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
 }
 .content-container {
@@ -123,16 +124,21 @@ useHead({
   font-family: Roboto, sans-serif;
   max-width: 1400px;
   line-height: 2;
+  letter-spacing: 0.9px;
   font-size: 20px;
   font-weight: 300;
-  margin: 0 auto 3rem;
+  margin: 2rem auto 3rem;
   padding: 0 4rem;
   text-align: center;
+  padding: 2rem 0;
+
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 0;
+  }
 
   @media screen and (max-width: 768px) {
     font-size: 18px;
     max-width: initial;
-    padding: 2rem 0;
     margin-bottom: 0;
   }
   @media screen and (max-width: 540px) {

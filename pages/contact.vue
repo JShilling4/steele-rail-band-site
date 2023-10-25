@@ -79,13 +79,16 @@ useHead({
 .container {
   max-width: var(--wrapper-width);
   margin: 0 auto;
+
   .copy {
     font-family: Roboto;
-    margin: 0 auto 3rem;
+    margin: 0 auto 2rem;
     line-height: 1.75;
-    font-size: 18px;
+    font-size: 19px;
+    letter-spacing: 0.9px;
     color: var(--copy-white-faded);
     padding: 0 8rem 4rem;
+
     @media screen and (max-width: 1200px) {
       width: 70%;
       padding: 0 1rem;
