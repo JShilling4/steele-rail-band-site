@@ -3,22 +3,12 @@
     <PageHeading>Gallery</PageHeading>
 
     <div class="view-container">
-      <div class="tabs-container">
-        <div
-          :class="['tab', { '--active': activeTab === 'photos' }]"
-          @click="activeTab = 'photos'"
-        >
-          Photos
-        </div>
-        <div
-          :class="['tab', { '--active': activeTab === 'videos' }]"
-          @click="activeTab = 'videos'"
-        >
-          Videos
-        </div>
-      </div>
-
-      <section v-if="activeTab === 'photos'" class="photos">
+      <SelectorTabs
+        :active-tab="activeTab"
+        :options="tabOptions"
+        @tab-change="(val) => (activeTab = val)"
+      />
+      <section v-show="activeTab === Tabs.Photo" class="photos">
         <div class="row">
           <ul class="image-gallery">
             <li v-for="n in imageCount">
@@ -28,7 +18,7 @@
         </div>
       </section>
 
-      <section v-if="activeTab === 'videos'" class="videos">
+      <section v-show="activeTab === Tabs.Video" class="videos">
         <div class="row">
           <ul class="video-gallery">
             <li v-for="video in fbVideos">
@@ -109,7 +99,22 @@ const fbVideos = [
   },
 ];
 
-const activeTab = ref("photos");
+enum Tabs {
+  Photo = "photos",
+  Video = "videos",
+}
+const { activeTab } = useTabs(Tabs.Photo);
+
+const tabOptions = [
+  {
+    id: Tabs.Photo,
+    label: "Photos",
+  },
+  {
+    id: Tabs.Video,
+    label: "Videos",
+  },
+];
 
 useHead({
   title,
@@ -146,38 +151,6 @@ h2 {
     left: 0;
     bottom: -10px;
     background-color: var(--color-secondary);
-  }
-}
-
-.tabs-container {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-
-  /* @media screen and (max-width: 430px) {
-    padding: 4rem 0;
-  } */
-  .tab {
-    font-family: Roboto;
-    font-size: 20px;
-    color: white;
-    font-weight: 300;
-    letter-spacing: 2px;
-    border-radius: 10px;
-    padding: 1rem;
-    border: 1px solid white;
-    cursor: pointer;
-
-    @media screen and (max-width: 1024px) {
-      padding: 0.5rem;
-      font-size: 16px;
-    }
-
-    &.--active {
-      background-color: white;
-      color: black;
-      font-weight: 500;
-    }
   }
 }
 

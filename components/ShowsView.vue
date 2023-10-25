@@ -1,15 +1,20 @@
 <template>
   <div class="view-container --with-bg">
+    <SelectorTabs
+      :active-tab="activeTab"
+      :options="tabOptions"
+      @tab-change="(val) => (activeTab = val)"
+    />
     <div class="shows-container">
       <div class="table-wrapper">
-        <ShowTable v-for="(show, i) in shows" :key="i" :show="show" />
+        <ShowTable v-for="(show, i) in computedShows" :key="i" :show="show" />
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const shows = [
+const currentYearShows = [
   // {
   //   date: {
   //     month: "Sep",
@@ -95,7 +100,7 @@ const shows = [
       day: "28th",
     },
     venue: {
-      name: "The Post",
+      name: "The Post (Halloween Party)",
       website: "https://www.facebook.com/profile.php?id=100057054386233",
     },
     time: "9pm - 1am",
@@ -233,16 +238,446 @@ const shows = [
     eventLink: "https://www.facebook.com/events/835356087749439",
   },
 ];
+
+const nextYearShows = [
+  {
+    date: {
+      month: "Jan",
+      day: "6th",
+    },
+    venue: {
+      name: "American Legion",
+      website: null,
+    },
+    time: "7pm - 10pm",
+    location: "Huntington, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Feb",
+      day: "9th",
+    },
+    venue: {
+      name: "The Post",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "8pm - 12am",
+    location: "Pierceton, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Feb",
+      day: "10th",
+    },
+    venue: {
+      name: "The Post",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "8pm - 12am",
+    location: "Pierceton, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Mar",
+      day: "16th",
+    },
+    venue: {
+      name: "Elks",
+      website: null,
+    },
+    time: "8pm - 12am",
+    location: "Wabash, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Mar",
+      day: "29th",
+    },
+    venue: {
+      name: "The Post",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "8pm - 12am",
+    location: "Pierceton, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Mar",
+      day: "30th",
+    },
+    venue: {
+      name: "The Post",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "8pm - 12am",
+    location: "Pierceton, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Apr",
+      day: "20th",
+    },
+    venue: {
+      name: "American Legion",
+      website: null,
+    },
+    time: "7pm - 11pm",
+    location: "Rochester, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Apr",
+      day: "27th",
+    },
+    venue: {
+      name: "American Legion",
+      website: null,
+    },
+    time: "8pm - 11pm",
+    location: "N. Manchester, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Apr",
+      day: "27th",
+    },
+    venue: {
+      name: "Moose (Members only)",
+      website: "https://www.facebook.com/goshenmoose",
+    },
+    time: "7pm - 11pm",
+    location: "Goshen, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "May",
+      day: "10th",
+    },
+    venue: {
+      name: "The Post",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "8pm - 12am",
+    location: "Pierceton, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "May",
+      day: "11th",
+    },
+    venue: {
+      name: "The Post",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "8pm - 12am",
+    location: "Pierceton, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "May",
+      day: "26th",
+    },
+    venue: {
+      name: "Jellystone",
+      website: "",
+    },
+    time: "8pm - 11pm",
+    location: "Plymouth, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Jun",
+      day: "1st",
+    },
+    venue: {
+      name: "Arts Country Campground",
+      website: "",
+    },
+    time: "8pm - 11pm",
+    location: "",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Jun",
+      day: "22nd",
+    },
+    venue: {
+      name: "Moose (Battle of the Bands)",
+      website: "https://www.facebook.com/goshenmoose",
+    },
+    time: "All Day",
+    location: "Goshen, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Jun",
+      day: "29th",
+    },
+    venue: {
+      name: "Private Party",
+      website: null,
+    },
+    time: "6pm - 9pm",
+    location: "",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Jul",
+      day: "6th",
+    },
+    venue: {
+      name: "Jellystone",
+      website: "",
+    },
+    time: "8pm - 11pm",
+    location: "Pierceton, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Jul",
+      day: "13th",
+    },
+    venue: {
+      name: "Private Party",
+      website: null,
+    },
+    time: "8pm - 11pm",
+    location: "",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Jul",
+      day: "20th",
+    },
+    venue: {
+      name: "American Legion",
+      website: null,
+    },
+    time: "8pm - 11pm",
+    location: "N. Manchester, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Jul",
+      day: "26th",
+    },
+    venue: {
+      name: "The Post (Pierceton Days)",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "8pm - 12am",
+    location: "Pierceton, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Jul",
+      day: "27th",
+    },
+    venue: {
+      name: "The Post (Pierceton Days)",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "8pm - 12am",
+    location: "Pierceton, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Aug",
+      day: "10th",
+    },
+    venue: {
+      name: "Woody's Campground",
+      website: null,
+    },
+    time: "7pm - 11pm",
+    location: "Peru, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Aug",
+      day: "31st",
+    },
+    venue: {
+      name: "Great Lakes Campground",
+      website: null,
+    },
+    time: "8pm - 11pm",
+    location: "Peru, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Sep",
+      day: "13th",
+    },
+    venue: {
+      name: "The Post",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "8pm - 12am",
+    location: "Pierceton, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Sep",
+      day: "14th",
+    },
+    venue: {
+      name: "The Post",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "8pm - 12am",
+    location: "Pierceton, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Oct",
+      day: "25th",
+    },
+    venue: {
+      name: "The Post",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "8pm - 12am",
+    location: "Pierceton, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Oct",
+      day: "26th",
+    },
+    venue: {
+      name: "The Post",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "8pm - 12am",
+    location: "Pierceton, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Nov",
+      day: "2nd",
+    },
+    venue: {
+      name: "Elks",
+      website: "https://www.facebook.com/ELKS471",
+    },
+    time: "8pm - 12am",
+    location: "Wabash, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Nov",
+      day: "9th",
+    },
+    venue: {
+      name: "Goshen Moose (Members only)",
+      website: "https://www.facebook.com/goshenmoose",
+    },
+    time: "7pm - 11pm",
+    location: "Goshen, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Nov",
+      day: "27th",
+    },
+    venue: {
+      name: "The Post",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "8pm - 12am",
+    location: "Pierceton, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Nov",
+      day: "29th",
+    },
+    venue: {
+      name: "The Post",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "8pm - 12am",
+    location: "Pierceton, IN",
+    eventLink: "",
+  },
+  {
+    date: {
+      month: "Nov",
+      day: "30th",
+    },
+    venue: {
+      name: "The Post",
+      website: "https://www.facebook.com/profile.php?id=100057054386233",
+    },
+    time: "8pm - 12am",
+    location: "Pierceton, IN",
+    eventLink: "",
+  },
+];
+
+enum Tabs {
+  CurrentYear = "2023",
+  NextYear = "2024",
+}
+const { activeTab } = useTabs(Tabs.CurrentYear);
+
+const computedShows = computed(() => {
+  if (activeTab.value === Tabs.NextYear) {
+    return nextYearShows;
+  }
+  return currentYearShows;
+});
+
+const tabOptions = [
+  {
+    id: Tabs.CurrentYear,
+    label: Tabs.CurrentYear,
+  },
+  {
+    id: Tabs.NextYear,
+    label: Tabs.NextYear,
+  },
+];
 </script>
 
 <style lang="scss" scoped>
 .table-wrapper {
-  margin: 1rem auto 0;
+  margin: 2rem auto 0;
   color: #fff;
 
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     margin-top: 0rem;
-  }
+  } */
   @media screen and (max-width: 556px) {
     padding: 0 0 4rem;
   }
