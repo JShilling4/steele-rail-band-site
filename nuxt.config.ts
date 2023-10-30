@@ -58,5 +58,11 @@ export default defineNuxtConfig({
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
   ssr: false,
-  modules: [["@nuxtjs/robots", { configPath: "~/config/robots.config" }]],
+  modules: [
+    ["@nuxtjs/robots", { configPath: "~/config/robots.config" }],
+    "@nuxtjs/supabase",
+  ],
+  supabase: {
+    redirect: false,
+  },
 });
