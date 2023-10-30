@@ -81,32 +81,32 @@ const currentYearShows = [
   //   location: "Rochester, IN",
   //   eventLink: "https://www.facebook.com/events/1431068650793216",
   // },
-  {
-    date: {
-      month: "Oct",
-      day: "27th",
-    },
-    venue: {
-      name: "The Post",
-      website: "https://www.facebook.com/profile.php?id=100057054386233",
-    },
-    time: "9pm - 1am",
-    location: "Pierceton, IN",
-    eventLink: "https://www.facebook.com/events/856344468941146",
-  },
-  {
-    date: {
-      month: "Oct",
-      day: "28th",
-    },
-    venue: {
-      name: "The Post (Halloween Party)",
-      website: "https://www.facebook.com/profile.php?id=100057054386233",
-    },
-    time: "9pm - 1am",
-    location: "Pierceton, IN",
-    eventLink: "https://www.facebook.com/events/859098571996088",
-  },
+  // {
+  //   date: {
+  //     month: "Oct",
+  //     day: "27th",
+  //   },
+  //   venue: {
+  //     name: "The Post",
+  //     website: "https://www.facebook.com/profile.php?id=100057054386233",
+  //   },
+  //   time: "9pm - 1am",
+  //   location: "Pierceton, IN",
+  //   eventLink: "https://www.facebook.com/events/856344468941146",
+  // },
+  // {
+  //   date: {
+  //     month: "Oct",
+  //     day: "28th",
+  //   },
+  //   venue: {
+  //     name: "The Post (Halloween Party)",
+  //     website: "https://www.facebook.com/profile.php?id=100057054386233",
+  //   },
+  //   time: "9pm - 1am",
+  //   location: "Pierceton, IN",
+  //   eventLink: "https://www.facebook.com/events/859098571996088",
+  // },
   {
     date: {
       month: "Nov",
