@@ -30,11 +30,14 @@
             target="_blank"
             referrerpolicy="no-referrer"
           >
-            {{ show.venue.name }}
+            {{ show.venue.name }} {{ show.event ? `(${show.event})` : "" }}
           </a>
         </td>
         <td width="300">{{ show.start_time }} - {{ show.end_time }}</td>
-        <td>{{ show.venue.city }}</td>
+        <td>
+          {{ show.venue.city }}{{ show.venue.state ? "," : "" }}
+          {{ show.venue.state }}
+        </td>
         <td class="last" align="right">
           <a
             v-if="show.fb_url"
