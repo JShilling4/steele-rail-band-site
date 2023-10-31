@@ -6,34 +6,39 @@
           <div class="date-container">
             <div class="date-container__text">
               <a
-                v-if="show.eventLink"
-                :href="show.eventLink"
+                v-if="show.fb_url"
+                :href="show.fb_url"
                 target="_blank"
                 referrerpolicy="no-referrer"
                 class="date-container-fb-link"
               >
                 <font-awesome-icon :icon="['fab', 'facebook']" />
               </a>
-              <span class="month">{{ show.date.month }}&nbsp; </span>
-              <span class="day">{{ show.date.day }}</span>
+              <span class="month">
+                {{ getShortMonth(show.date) }}
+              </span>
+              <span class="day"
+                >{{ new Date(show.date).getDate() + 1
+                }}{{ getDayOrdinal(new Date(show.date).getDate() + 1) }}</span
+              >
             </div>
           </div>
         </td>
         <td width="350" class="venue-name">
           <a
-            :href="show.venue.website as string"
+            :href="show.venue.website_url as string"
             target="_blank"
             referrerpolicy="no-referrer"
           >
             {{ show.venue.name }}
           </a>
         </td>
-        <td width="300">{{ show.time }}</td>
-        <td>{{ show.location }}</td>
+        <td width="300">{{ show.start_time }} - {{ show.end_time }}</td>
+        <td>{{ show.venue.city }}</td>
         <td class="last" align="right">
           <a
-            v-if="show.eventLink"
-            :href="show.eventLink"
+            v-if="show.fb_url"
+            :href="show.fb_url"
             target="_blank"
             referrerpolicy="no-referrer"
           >
@@ -46,21 +51,18 @@
 </template>
 
 <script setup lang="ts">
+import { IShow } from "./ShowsView.vue";
+import { getDayOrdinal } from "@/utilities/helpers";
+
 defineProps<{
-  show: {
-    date: {
-      month: string;
-      day: string;
-    };
-    venue: {
-      name: string;
-      website: string | null;
-    };
-    time: string;
-    location: string;
-    eventLink: string | null;
-  };
+  show: IShow;
 }>();
+
+function getShortMonth(date: string) {
+  return new Date(date).toLocaleString("default", {
+    month: "short",
+  });
+}
 </script>
 
 <style lang="scss" scoped>
