@@ -17,10 +17,10 @@
               <span class="month">
                 {{ getShortMonth(show.date) }}
               </span>
-              <span class="day"
-                >{{ new Date(show.date).getDate() + 1
-                }}{{ getDayOrdinal(new Date(show.date).getDate() + 1) }}</span
-              >
+              <span class="day">
+                {{ new Date(show.date).getDate() + 1
+                }}{{ getDayOrdinal(new Date(show.date).getDate() + 1) }}
+              </span>
             </div>
           </div>
         </td>
@@ -211,7 +211,8 @@ function getShortMonth(date: string) {
       .month {
         display: block;
         @media screen and (max-width: 768px) {
-          display: inline;
+          display: inline-block;
+          margin-right: 8px;
         }
       }
       .day {
