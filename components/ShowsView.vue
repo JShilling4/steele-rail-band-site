@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Database } from "@/types/supabase";
+import { type Database, IShow } from "@/types";
 const client = useSupabaseClient<Database>();
 
 const allShows = ref<IShow[]>([]);
@@ -60,22 +60,6 @@ const tabOptions = [
   },
 ];
 
-export interface IShow {
-  id: number;
-  date: string;
-  venue: IVenue;
-  start_time: string;
-  end_time: string;
-  event: string | null;
-  fb_url: string | null;
-}
-export interface IVenue {
-  id: number;
-  name: string;
-  website_url: string | null;
-  city: string | null;
-  state: string | null;
-}
 onBeforeMount(async () => {
   const { data: shows } = await useAsyncData("show", async () => {
     const { data } = await client.from("show").select(`
