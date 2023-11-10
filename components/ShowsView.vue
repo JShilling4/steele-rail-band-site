@@ -23,8 +23,8 @@ const currentYearShows = computed(() => {
   const today = new Date(new Date().toDateString());
 
   return allShows.value.filter((show) => {
-    console.log("show date: ", new Date(new Date(show.date)).toUTCString());
-    console.log("today: ", today);
+    // console.log("show date: ", new Date(new Date(show.date)).toUTCString());
+    // console.log("today: ", today);
     return (
       show.date.slice(0, 4) === String(thisYear) &&
       new Date(new Date(show.date).toUTCString()) > today
