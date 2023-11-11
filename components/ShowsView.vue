@@ -20,15 +20,16 @@ const client = useSupabaseClient<Database>();
 const allShows = ref<IShow[]>([]);
 const currentYearShows = computed(() => {
   const thisYear = new Date().getFullYear();
-  const today = new Date(new Date().toDateString());
+  const today = new Date(new Date().toLocaleDateString());
+  today.setHours(0, 0, 0);
 
   return allShows.value.filter((show) => {
-    // console.log("show date: ", new Date(new Date(show.date)).toUTCString());
-    // console.log("today: ", today);
-    return (
-      show.date.slice(0, 4) === String(thisYear) &&
-      new Date(new Date(show.date).toUTCString()) > today
+    const dateObj = new Date(show.date);
+    const showDate = new Date(
+      new Date(dateObj.setDate(dateObj.getDate() + 1)).setHours(0, 0, 0),
     );
+
+    return show.date.slice(0, 4) === String(thisYear) && showDate >= today;
   });
 });
 const nextYearShows = computed(() => {
