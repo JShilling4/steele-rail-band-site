@@ -16,6 +16,10 @@ export default defineNuxtConfig({
           content: "Steele Rail Band | Ride the Rail",
         },
         {
+          property: "og:site_name",
+          content: "The Steele Rail Band",
+        },
+        {
           property: "og:url",
           content: "https://www.steelerailband.com",
         },
