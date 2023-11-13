@@ -1,6 +1,7 @@
-export function getDayOrdinal(day: number) {
-  if (day > 3 && day < 21) return "th";
-  switch (day % 10) {
+export function getDayOrdinal(date: string) {
+  const dayNumber = new Date(removeTimezone(date)).getUTCDate();
+  if (dayNumber > 3 && dayNumber < 21) return "th";
+  switch (dayNumber % 10) {
     case 1:
       return "st";
     case 2:
@@ -10,4 +11,14 @@ export function getDayOrdinal(day: number) {
     default:
       return "th";
   }
+}
+
+export function removeTimezone(date: string): string {
+  return new Date(date).toISOString().slice(0, -1);
+}
+
+export function getShortMonth(date: string): string {
+  return new Date(removeTimezone(date)).toLocaleString("default", {
+    month: "short",
+  });
 }

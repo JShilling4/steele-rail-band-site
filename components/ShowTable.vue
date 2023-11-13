@@ -14,19 +14,14 @@
               >
                 <font-awesome-icon :icon="['fab', 'facebook']" />
               </a>
-              <div v-if="show.date === '2024-06-01'">
-                <span class="month"> Jun </span>
-                <span class="day"> 1st </span>
-              </div>
-              <div v-else>
-                <span class="month">
-                  {{ getShortMonth(show.date) }}
-                </span>
-                <span class="day">
-                  {{ new Date(show.date).getUTCDate()
-                  }}{{ getDayOrdinal(new Date(show.date).getUTCDate()) }}
-                </span>
-              </div>
+              <span class="month">
+                {{ getShortMonth(show.date) }}
+              </span>
+              <span class="day">
+                {{ new Date(show.date).getUTCDate()
+                }}{{ getDayOrdinal(show.date) }}
+              </span>
+              <!-- </div> -->
             </div>
           </div>
         </td>
@@ -60,18 +55,12 @@
 </template>
 
 <script setup lang="ts">
-import { getDayOrdinal } from "@/utilities/helpers";
+import { getDayOrdinal, getShortMonth } from "@/utilities/helpers";
 import { IShow } from "~/types";
 
 defineProps<{
   show: IShow;
 }>();
-
-function getShortMonth(date: string) {
-  return new Date(date).toLocaleString("default", {
-    month: "short",
-  });
-}
 </script>
 
 <style lang="scss" scoped>
