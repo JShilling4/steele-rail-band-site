@@ -5,7 +5,7 @@
       :options="tabOptions"
       @tab-change="(val) => (activeTab = val)"
     />
-    <div class="shows-container">
+    <div :class="['shows-container', { 'temp-height': !allShows.length }]">
       <div class="table-wrapper">
         <ShowTable v-for="(show, i) in computedShows" :key="i" :show="show" />
       </div>
@@ -94,9 +94,6 @@ onBeforeMount(async () => {
   margin: 2rem auto 0;
   color: #fff;
 
-  /* @media screen and (max-width: 768px) {
-    margin-top: 0rem;
-  } */
   @media screen and (max-width: 556px) {
     padding: 0 0 4rem;
   }
@@ -116,6 +113,10 @@ onBeforeMount(async () => {
   }
   @media screen and (max-width: 430px) {
     padding: 0 1rem;
+  }
+
+  &.temp-height {
+    min-height: 90vh;
   }
 }
 </style>
