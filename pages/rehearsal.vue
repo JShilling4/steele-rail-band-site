@@ -11,7 +11,7 @@ onBeforeMount(async () => {
     const { data } = await client
       .from("setlist")
       .select("id, name, url")
-      .eq("name", "main")
+      .eq("name", "rehearsal")
       .single();
     return data;
   });
