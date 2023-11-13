@@ -2,12 +2,22 @@
   <div class="page-wrapper">
     <PageHeading>About The Band</PageHeading>
     <p class="copy">
-      The Steele Rail Band is a country band that covers music spanning several
-      decades. In addition to country, we sprinkle in some southern rock,
-      alternative, classic rock and blues. If you feel like dancing, singing
-      along or just enjoying the music and atmosphere, we've put together a show
-      that has you covered. We play venues of all sizes including
-      fairs/festivals, campgrounds, clubs/bars, casinos & private parties.
+      <span class="accent-red">Steele Rail</span>
+      <span>&nbsp;is a versatile country band that covers&nbsp;</span>
+      <span class="accent-red">music</span>
+      <span>&nbsp;spanning several decades. In addition to&nbsp;</span>
+      <span class="accent-red">country</span
+      ><span>, we add some southern</span> <span class="accent-red">rock</span
+      ><span>, alternative, classic rock and&nbsp;</span>
+      <span class="accent-red">blues</span>. <span>If you feel like</span>
+      <span class="accent-red">&nbsp;dancing</span
+      ><span>, singing along or just enjoying the music and&nbsp;</span>
+      <span class="accent-red">atmosphere</span
+      ><span
+        >, we've put together a show that has you covered. We play venues of all
+        sizes including fairs/festivals, campgrounds, clubs/bars, casinos &
+        private parties.</span
+      >
     </p>
     <div class="content-wrapper">
       <div class="content-container">
@@ -132,6 +142,10 @@ useHead({
   text-align: center;
   padding: 2rem 0;
 
+  span:not(.accent-red) {
+    animation: fadein 4.5s cubic-bezier(0.69, 0.21, 0.84, 0.72);
+  }
+
   @media screen and (max-width: 1024px) {
     margin-bottom: 0;
   }
@@ -189,6 +203,31 @@ useHead({
       padding: 5px 10px;
       display: inline-block;
     }
+  }
+}
+
+.accent-red {
+  display: inline-block;
+  font-weight: bold;
+  color: var(--color-primary-bright);
+  animation: shrink 3.5s cubic-bezier(0.69, 0.21, 0.84, 0.72);
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(2.5) translateY(-5px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 </style>
