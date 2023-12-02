@@ -60,15 +60,7 @@
               alt="Justin on lead guitar - Steele Rail Band"
               class="member-image"
             />
-            <p class="member-name"><span>Justin</span> Lead Guitar</p>
-          </div>
-          <div class="member-container">
-            <img
-              src="@/assets/images/kevin-1.jpg"
-              alt="Kevin on rhythm guitar - Steele Rail Band"
-              class="member-image"
-            />
-            <p class="member-name"><span>Kevin</span> Rhythm Guitar</p>
+            <p class="member-name"><span>Justin</span> Guitar</p>
           </div>
           <div class="member-container">
             <img

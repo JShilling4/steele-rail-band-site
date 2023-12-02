@@ -50,7 +50,7 @@
 <script setup lang="ts">
 const title = ref("Steele Rail Band - Gallery");
 const description = ref("Browse Steele Rail Band photos and videos.");
-const imageCount = 28;
+const imageCount = 31;
 const fbVideos = [
   {
     title: "Strawberry Wine",
