@@ -14,7 +14,8 @@
 </template>
 
 <script setup lang="ts">
-import { type Database, IShow } from "@/types";
+import type { Database, IShow } from "@/types";
+
 const client = useSupabaseClient<Database>();
 
 const allShows = ref<IShow[]>([]);

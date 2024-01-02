@@ -1,4 +1,4 @@
-import { IVenue } from "@/types";
+import type { IVenue } from "@/types";
 
 export interface IShow {
   id: number;

@@ -56,7 +56,7 @@
 
 <script setup lang="ts">
 import { getDayOrdinal, getShortMonth } from "@/utilities/helpers";
-import { IShow } from "~/types";
+import type { IShow } from "@/types";
 
 defineProps<{
   show: IShow;
