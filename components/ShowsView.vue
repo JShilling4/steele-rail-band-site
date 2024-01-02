@@ -1,10 +1,10 @@
 <template>
   <div class="view-container --with-bg">
-    <SelectorTabs
+    <!-- <SelectorTabs
       :active-tab="activeTab"
       :options="tabOptions"
       @tab-change="(val) => (activeTab = val)"
-    />
+    /> -->
     <div :class="['shows-container', { 'temp-height': !allShows.length }]">
       <div class="table-wrapper">
         <ShowTable v-for="(show, i) in computedShows" :key="i" :show="show" />
@@ -32,36 +32,36 @@ const currentYearShows = computed(() => {
     return show.date.slice(0, 4) === String(thisYear) && showDate >= today;
   });
 });
-const nextYearShows = computed(() => {
-  const thisYear = new Date().getFullYear();
-  return allShows.value.filter(
-    (show) => show.date.slice(0, 4) === String(Number(thisYear) + 1),
-  );
-});
+// const nextYearShows = computed(() => {
+//   const thisYear = new Date().getFullYear();
+//   return allShows.value.filter(
+//     (show) => show.date.slice(0, 4) === String(Number(thisYear) + 1),
+//   );
+// });
 
-enum Tabs {
-  CurrentYear = "2023",
-  NextYear = "2024",
-}
-const { activeTab } = useTabs(Tabs.CurrentYear);
+// enum Tabs {
+//   CurrentYear = "2024",
+//   NextYear = "2025",
+// }
+// const { activeTab } = useTabs(Tabs.CurrentYear);
 
 const computedShows = computed(() => {
-  if (activeTab.value === Tabs.NextYear) {
-    return nextYearShows.value;
-  }
+  // if (activeTab.value === Tabs.NextYear) {
+  //   return nextYearShows.value;
+  // }
   return currentYearShows.value;
 });
 
-const tabOptions = [
-  {
-    id: Tabs.CurrentYear,
-    label: Tabs.CurrentYear,
-  },
-  {
-    id: Tabs.NextYear,
-    label: Tabs.NextYear,
-  },
-];
+// const tabOptions = [
+//   {
+//     id: Tabs.CurrentYear,
+//     label: Tabs.CurrentYear,
+//   },
+//   {
+//     id: Tabs.NextYear,
+//     label: Tabs.NextYear,
+//   },
+// ];
 
 onBeforeMount(async () => {
   const { data: shows } = await useAsyncData("show", async () => {
