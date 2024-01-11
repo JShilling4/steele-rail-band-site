@@ -34,7 +34,7 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "The Steele Rail Band is a country band based out of Northern Indiana that covers music spanning several decades. In addition to country, we sprinkle in some southern rock, alternative, classic rock and blues.",
+            "The Steele Rail Band is a country-rooted variety band based out of Northern Indiana that covers music spanning several decades. In addition to country, we play southern rock, alternative, classic rock and blues.",
         },
         {
           name: "keywords",

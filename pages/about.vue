@@ -3,11 +3,11 @@
     <PageHeading>About The Band</PageHeading>
     <p class="copy">
       <span class="accent-red">Steele Rail</span>
-      <span>&nbsp;is a versatile country band that covers&nbsp;</span>
+      <span>&nbsp;is a country-rooted variety band that covers&nbsp;</span>
       <span class="accent-red">music</span>
       <span>&nbsp;spanning several decades. In addition to&nbsp;</span>
-      <span class="accent-red">country</span
-      ><span>, we add some southern</span> <span class="accent-red">rock</span
+      <span class="accent-red">country</span><span>, we play southern</span>
+      <span class="accent-red">rock</span
       ><span>, alternative, classic rock and&nbsp;</span>
       <span class="accent-red">blues</span>. <span>If you feel like</span>
       <span class="accent-red">&nbsp;dancing</span
