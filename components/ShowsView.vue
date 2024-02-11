@@ -27,7 +27,7 @@ const currentYearShows = computed(() => {
   return allShows.value.filter((show) => {
     const dateObj = new Date(show.date);
     const showDate = new Date(
-      new Date(dateObj.setDate(dateObj.getDate() + 1)).setHours(0, 0, 0),
+      new Date(dateObj.setDate(dateObj.getDate())).setHours(0, 0, 0),
     );
 
     return show.date.slice(0, 4) === String(thisYear) && showDate >= today;
