@@ -6,9 +6,30 @@ export type Json =
   | { [key: string]: Json | undefined }
   | Json[]
 
-export interface Database {
+export type Database = {
   public: {
     Tables: {
+      contact: {
+        Row: {
+          email: string | null
+          id: number
+          name: string
+          phone: string | null
+        }
+        Insert: {
+          email?: string | null
+          id?: number
+          name: string
+          phone?: string | null
+        }
+        Update: {
+          email?: string | null
+          id?: number
+          name?: string
+          phone?: string | null
+        }
+        Relationships: []
+      }
       member: {
         Row: {
           first_name: string
@@ -146,6 +167,27 @@ export interface Database {
           }
         ]
       }
+      show_images: {
+        Row: {
+          caption: string | null
+          created_at: string
+          id: number
+          url: string
+        }
+        Insert: {
+          caption?: string | null
+          created_at?: string
+          id?: number
+          url: string
+        }
+        Update: {
+          caption?: string | null
+          created_at?: string
+          id?: number
+          url?: string
+        }
+        Relationships: []
+      }
       song: {
         Row: {
           artist: string
@@ -192,27 +234,47 @@ export interface Database {
       }
       venue: {
         Row: {
+          address: string | null
           city: string | null
+          contact: number | null
           id: number
           name: string
+          phone: string | null
+          serves_food: boolean
           state: string | null
           website_url: string | null
         }
         Insert: {
+          address?: string | null
           city?: string | null
+          contact?: number | null
           id?: number
           name: string
+          phone?: string | null
+          serves_food?: boolean
           state?: string | null
           website_url?: string | null
         }
         Update: {
+          address?: string | null
           city?: string | null
+          contact?: number | null
           id?: number
           name?: string
+          phone?: string | null
+          serves_food?: boolean
           state?: string | null
           website_url?: string | null
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "venue_contact_fkey"
+            columns: ["contact"]
+            isOneToOne: false
+            referencedRelation: "contact"
+            referencedColumns: ["id"]
+          }
+        ]
       }
     }
     Views: {

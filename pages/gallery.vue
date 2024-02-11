@@ -11,8 +11,8 @@
       <section v-show="activeTab === Tabs.Photo" class="photos">
         <div class="row">
           <ul class="image-gallery">
-            <li v-for="n in imageCount">
-              <img :src="`/images/band-${n}.jpg`" alt="" />
+            <li v-for="image in showImages">
+              <img :src="image.url" alt="" />
             </li>
           </ul>
         </div>
@@ -48,9 +48,14 @@
 </template>
 
 <script setup lang="ts">
+import { type Tables } from '@/types';
+
+
+const supabase = useSupabaseClient();
+
 const title = ref("Steele Rail Band - Gallery");
 const description = ref("Browse Steele Rail Band photos and videos.");
-const imageCount = 31;
+const showImages = ref<Tables<"show_images">[]>([]);
 const fbVideos = [
   {
     title: "Strawberry Wine",
@@ -86,6 +91,10 @@ const fbVideos = [
   // },
 
   {
+    title: "Need You Tonight",
+    url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fkimberly.bollan%2Fvideos%2F3626160614325358%2F&show_text=false&width=267&t=0",
+  },
+  {
     title: "Stop Draggin' My Heart",
     url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F939100403817257%2F&show_text=false&width=267&t=0",
   },
@@ -98,6 +107,7 @@ const fbVideos = [
     url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F6424770004236787%2F&show_text=false&width=267&t=0",
   },
 ];
+
 
 enum Tabs {
   Photo = "photos",
@@ -115,6 +125,19 @@ const tabOptions = [
     label: "Videos",
   },
 ];
+
+async function getImages() {
+const { data: show_images, error } = await supabase
+  .from('show_images')
+  .select('*')
+  if (!error) {
+    showImages.value = show_images;
+  }
+}
+
+onMounted(() => {
+  getImages();
+})
 
 useHead({
   title,
