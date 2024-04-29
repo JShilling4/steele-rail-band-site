@@ -48,8 +48,7 @@
 </template>
 
 <script setup lang="ts">
-import { type Tables } from '@/types';
-
+import { type Tables } from "@/types";
 
 const supabase = useSupabaseClient();
 
@@ -77,27 +76,26 @@ const fbVideos = [
     title: "Whitehouse Road",
     url: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fposts%2Fpfbid0tXENoAy9dzzEc9DUvbAyPs99Nn6bgjwsgJcboeKfn7tiK9BYmmjkoFZ3UfUVEC6pl&show_text=true&width=500",
   },
-  // {
-  //   title: "Gunpowder & Lead",
-  //   url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F299489032548846%2F&show_text=false&width=267&t=0",
-  // },
+  {
+    title: "American Band",
+    url: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fposts%2Fpfbid0iEBA6Pw7tPrtQ8nbqw7VDyvmfsECSc8BAE8B6sbAh6kg4LiaG5g9kEWTorrn3byjl&show_text=true&width=500",
+  },
   {
     title: "Down In Mississippi",
     url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F546211810900402%2F&show_text=false&width=267&t=0",
   },
-  // {
-  //   title: "Tush",
-  //   url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F1523048004766110%2F&show_text=false&width=267&t=0",
-  // },
-
+  {
+    title: "Born to be Wild",
+    url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fklutzwd%2Fvideos%2F1428913524660170%2F&show_text=false&width=267&t=0",
+  },
   {
     title: "Need You Tonight",
     url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fkimberly.bollan%2Fvideos%2F3626160614325358%2F&show_text=false&width=267&t=0",
   },
-  {
-    title: "Stop Draggin' My Heart",
-    url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F939100403817257%2F&show_text=false&width=267&t=0",
-  },
+  // {
+  //   title: "Stop Draggin' My Heart",
+  //   url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F939100403817257%2F&show_text=false&width=267&t=0",
+  // },
   // {
   //   title: "Seven Nation Army",
   //   url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F675182124640035%2F&show_text=false&width=267&t=0",
@@ -107,7 +105,6 @@ const fbVideos = [
     url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F6424770004236787%2F&show_text=false&width=267&t=0",
   },
 ];
-
 
 enum Tabs {
   Photo = "photos",
@@ -127,9 +124,9 @@ const tabOptions = [
 ];
 
 async function getImages() {
-const { data: show_images, error } = await supabase
-  .from('show_images')
-  .select('*')
+  const { data: show_images, error } = await supabase
+    .from("show_images")
+    .select("*");
   if (!error) {
     showImages.value = show_images;
   }
@@ -137,7 +134,7 @@ const { data: show_images, error } = await supabase
 
 onMounted(() => {
   getImages();
-})
+});
 
 useHead({
   title,
