@@ -3,7 +3,10 @@
     <PageHeading>About The Band</PageHeading>
     <p class="copy">
       <span class="accent-red">Steele Rail</span>
-      <span>&nbsp;is a <span class="accent-red">variety</span> band that covers&nbsp;</span>
+      <span
+        >&nbsp;is a <span class="accent-red">variety</span> band that
+        covers&nbsp;</span
+      >
       <span class="accent-red">music</span>
       <span>&nbsp;spanning several decades. We play&nbsp;</span>
       <span class="accent-red">country</span><span>, southern&nbsp;</span>
@@ -60,7 +63,7 @@
               alt="Justin on lead guitar - Steele Rail Band"
               class="member-image"
             />
-            <p class="member-name"><span>Justin</span> Guitar</p>
+            <p class="member-name"><span>Justin</span> Lead Guitar</p>
           </div>
           <div class="member-container">
             <img
