@@ -1,6 +1,11 @@
 <template>
   <div class="wrapper">
-    <img class="logo" src="@/assets/images/logo.jpg" alt="" />
+    <img
+      fetchpriority="high"
+      class="logo"
+      src="@/assets/images/logo.jpg"
+      alt="Steele Rail Band logo"
+    />
 
     <ul class="navlink-container">
       <li class="navlink">
