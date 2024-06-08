@@ -2,7 +2,14 @@
   <header class="outer-wrapper">
     <nav class="wrapper">
       <RouterLink class="logo" to="/">
-        <img class="logo" src="@/assets/images/logo.jpg" alt="" />
+        <img
+          class="logo"
+          src="@/assets/images/logo.jpg"
+          alt="Steel Rail Band logo"
+          aria-hidden="true"
+          focusable="false"
+        />
+        <span class="sr-only">Home</span>
       </RouterLink>
       <ul v-if="showMenu" class="navlink-container">
         <li class="navlink">
@@ -23,7 +30,8 @@
             noreferrer
             target="_blank"
           >
-            <font-awesome-icon :icon="['fab', 'facebook']" />
+            <font-awesome-icon :icon="['fab', 'facebook']" aria-hidden="true" />
+            <span class="sr-only">Facebook</span>
           </a>
         </li>
       </ul>
