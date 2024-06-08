@@ -9,6 +9,7 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
+    "@nuxt/image": "^1.7.0",
     "@nuxtjs/supabase": "^1.2.2",
     "@types/node": "^20.14.2",
     "@typescript-eslint/eslint-plugin": "^7.12.0",
