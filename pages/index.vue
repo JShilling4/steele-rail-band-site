@@ -1,9 +1,12 @@
 <template>
   <div class="wrapper">
-    <img
+    <NuxtImg
+      provider="cloudinary"
+      src="v1717856953/logo_qxdxee.jpg"
+      width="720"
+      height="462"
       class="logo"
-      src="@/assets/images/logo.jpg"
-      alt="Steele Rail Band logo"
+      preload
     />
 
     <ul class="navlink-container">
@@ -66,6 +69,7 @@ useHead({
 
 .logo {
   margin-bottom: 6rem;
+  max-width: 100%;
 
   @media screen and (max-width: 768px) {
     height: 300px;

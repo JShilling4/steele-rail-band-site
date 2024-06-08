@@ -68,8 +68,15 @@ export default defineNuxtConfig({
   modules: [
     ["@nuxtjs/robots", { configPath: "~/config/robots.config" }],
     "@nuxtjs/supabase",
+    "@nuxt/image",
   ],
   supabase: {
     redirect: false,
+  },
+  image: {
+    provider: "cloudinary",
+    cloudinary: {
+      baseURL: "https://res.cloudinary.com/damqu5egp/image/upload/",
+    },
   },
 });

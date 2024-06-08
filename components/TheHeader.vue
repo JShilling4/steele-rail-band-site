@@ -2,12 +2,10 @@
   <header class="outer-wrapper">
     <nav class="wrapper">
       <RouterLink class="logo" to="/">
-        <img
+        <NuxtImg
+          provider="cloudinary"
+          src="v1717856953/logo_qxdxee.jpg"
           class="logo"
-          src="@/assets/images/logo.jpg"
-          alt="Steel Rail Band logo"
-          aria-hidden="true"
-          focusable="false"
         />
         <span class="sr-only">Home</span>
       </RouterLink>
