@@ -30,6 +30,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@nuxtjs/cloudinary": "3.0.0-rc.1",
     "@nuxtjs/robots": "^3.0.0"
   }
 }
