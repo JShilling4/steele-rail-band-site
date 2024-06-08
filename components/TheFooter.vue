@@ -77,6 +77,9 @@ footer .content-wrapper {
     padding-bottom: 1rem;
     font-weight: 300;
     font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .social-icon {
       margin-top: 1rem;
