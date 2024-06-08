@@ -2,17 +2,24 @@
   <footer>
     <div class="content-wrapper">
       <div class="top-bar">
-        <a
-          href="https://www.facebook.com/profile.php?id=100082719523304"
-          target="_blank"
-        >
-          <i class="fab fa-facebook icon"></i>
-        </a>
         <img
           src="@/assets/images/footer-logo.jpg"
           alt="Steele Rail Band logo"
           class="footer-logo"
         />
+        <a
+          href="https://www.facebook.com/steelerailband"
+          noreferrer
+          target="_blank"
+          class="social-icon"
+        >
+          <font-awesome-icon
+            :icon="['fab', 'facebook']"
+            aria-hidden="true"
+            class="icon"
+          />
+          <span class="sr-only">Facebook</span>
+        </a>
         <ul>
           <li class="navlink">
             <RouterLink to="/shows">Shows</RouterLink>
@@ -56,11 +63,6 @@ footer {
 footer .content-wrapper {
   text-align: center;
 
-  .icon {
-    color: var(--color-primary);
-    font-size: 1.75rem;
-  }
-
   .footer-logo {
     height: 120px;
   }
@@ -75,6 +77,15 @@ footer .content-wrapper {
     padding-bottom: 1rem;
     font-weight: 300;
     font-family: Roboto;
+
+    .social-icon {
+      margin-top: 1rem;
+      color: #fff;
+    }
+    .icon {
+      color: #fff;
+      font-size: 2rem;
+    }
   }
 
   .bottom-bar {

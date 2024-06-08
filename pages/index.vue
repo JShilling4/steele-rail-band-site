@@ -21,7 +21,8 @@
           noreferrer
           target="_blank"
         >
-          <font-awesome-icon :icon="['fab', 'facebook']" />
+          <font-awesome-icon :icon="['fab', 'facebook']" aria-hidden="true" />
+          <span class="sr-only">Facebook</span>
         </a>
       </li>
     </ul>
