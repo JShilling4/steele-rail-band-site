@@ -1,7 +1,6 @@
 <template>
   <div class="wrapper">
     <img
-      fetchpriority="high"
       class="logo"
       src="@/assets/images/logo.jpg"
       alt="Steele Rail Band logo"
