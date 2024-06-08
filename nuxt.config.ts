@@ -48,6 +48,11 @@ export default defineNuxtConfig({
       style: [],
       link: [
         {
+          rel: "preload",
+          as: "image",
+          href: "@/assets/images/logo.jpg",
+        },
+        {
           rel: "canonical",
           href: "https://www.steelerailband.com",
         },
