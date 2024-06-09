@@ -65,7 +65,7 @@ useHead({
 
 <style lang="scss" scoped>
 .content-wrapper {
-  background-image: url("/assets/images/page-bg.jpg");
+  background-image: url("https://res.cloudinary.com/damqu5egp/image/upload/v1717951765/steele_rail_band/backgrounds/page-bg_mjzrxz.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -26,58 +26,65 @@
       <div class="content-container">
         <div class="member-images">
           <div class="member-container">
-            <img
-              src="@/assets/images/ken-1.jpg"
-              alt="Ken on lead & backup vocals - Steele Rail Band"
+            <NuxtImg
+              provider="cloudinary"
+              src="v1717951762/steele_rail_band/members/ken-1_q9yg1n.jpg"
               class="member-image"
+              alt="Ken on lead & backup vocals - Steele Rail Band"
             />
             <p class="member-name"><span>Ken</span> Lead Vocals</p>
           </div>
           <div class="member-container">
-            <img
-              src="@/assets/images/amber-1.jpg"
-              alt="Amber on lead vocals - Steele Rail Band"
+            <NuxtImg
+              provider="cloudinary"
+              src="v1717951755/steele_rail_band/members/amber-1_anuaoc.jpg"
               class="member-image"
+              alt="Amber on lead vocals - Steele Rail Band"
             />
             <p class="member-name"><span>Amber</span> Lead Vocals</p>
           </div>
           <div class="member-container">
-            <img
-              src="@/assets/images/randy-1.jpg"
-              alt="Randy on bass & backup vocals - Steele Rail Band"
+            <NuxtImg
+              provider="cloudinary"
+              src="v1717951765/steele_rail_band/members/randy-1_ilvn8y.jpg"
               class="member-image"
+              alt="Randy on bass & backup vocals - Steele Rail Band"
             />
             <p class="member-name"><span>Randy</span> Bass/Vocals</p>
           </div>
           <div class="member-container">
-            <img
-              src="@/assets/images/mike-1.jpg"
-              alt="Mike on drums & vocals - Steele Rail Band"
+            <NuxtImg
+              provider="cloudinary"
+              src="v1717951763/steele_rail_band/members/mike-1_qxbftt.jpg"
               class="member-image"
+              alt="Mike on drums & vocals - Steele Rail Band"
             />
             <p class="member-name"><span>Mike</span> Drums/Vocals</p>
           </div>
           <div class="member-container">
-            <img
-              src="@/assets/images/justin-1.jpg"
-              alt="Justin on lead guitar - Steele Rail Band"
+            <NuxtImg
+              provider="cloudinary"
+              src="v1717951760/steele_rail_band/members/justin-1_kixjl7.jpg"
               class="member-image"
+              alt="Justin on lead guitar - Steele Rail Band"
             />
             <p class="member-name"><span>Justin</span> Lead Guitar</p>
           </div>
           <div class="member-container">
-            <img
-              src="@/assets/images/jim-1.jpg"
-              alt="Jim on banjo and keyboard - Steele Rail Band"
+            <NuxtImg
+              provider="cloudinary"
+              src="v1717951759/steele_rail_band/members/jim-1_yqsdxn.jpg"
               class="member-image"
+              alt="Jim on keys, banjo and keyboard - Steele Rail Band"
             />
             <p class="member-name"><span>Jim</span> Keys/Banjo/Mandolin</p>
           </div>
           <div class="member-container">
-            <img
-              src="@/assets/images/brent-1.jpg"
-              alt="Brent on sound & vocals - Steele Rail Band"
+            <NuxtImg
+              provider="cloudinary"
+              src="v1717951756/steele_rail_band/members/brent-1_srlkft.jpg"
               class="member-image"
+              alt="Brent, sound engineer for Steele Rail Band"
             />
             <p class="member-name"><span>Brent</span> Sound Engineer</p>
           </div>
@@ -106,7 +113,7 @@ useHead({
 
 <style lang="scss" scoped>
 .content-wrapper {
-  background-image: url("/assets/images/page-bg.jpg");
+  background-image: url("https://res.cloudinary.com/damqu5egp/image/upload/v1717951765/steele_rail_band/backgrounds/page-bg_mjzrxz.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

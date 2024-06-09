@@ -2,11 +2,13 @@
   <div class="wrapper">
     <NuxtImg
       provider="cloudinary"
-      src="v1717856953/logo_qxdxee.jpg"
+      src="v1717856953/steele_rail_band/logos/logo_qxdxee.jpg"
       width="720"
       height="462"
       class="logo"
       preload
+      alt="Steele Rail Band logo"
+      fetchpriority="high"
     />
 
     <ul class="navlink-container">
