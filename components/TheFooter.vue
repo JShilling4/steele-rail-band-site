@@ -2,8 +2,9 @@
   <footer>
     <div class="content-wrapper">
       <div class="top-bar">
-        <img
-          src="@/assets/images/footer-logo.jpg"
+        <NuxtImg
+          provider="cloudinary"
+          src="v1717951758/steele_rail_band/logos/footer-logo_b101hs.jpg"
           alt="Steele Rail Band logo"
           class="footer-logo"
         />

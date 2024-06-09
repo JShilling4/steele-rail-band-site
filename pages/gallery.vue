@@ -11,7 +11,7 @@
       <section v-show="activeTab === Tabs.Photo" class="photos">
         <div class="row">
           <ul class="image-gallery">
-            <li v-for="image in showImages">
+            <li v-for="image in showImages" :key="image.id">
               <img :src="image.url" alt="" />
             </li>
           </ul>
@@ -21,7 +21,7 @@
       <section v-show="activeTab === Tabs.Video" class="videos">
         <div class="row">
           <ul class="video-gallery">
-            <li v-for="video in fbVideos">
+            <li v-for="video in fbVideos" :key="video.title">
               <iframe
                 :src="video.url"
                 width="267"
@@ -31,7 +31,6 @@
                 frameborder="0"
                 allowfullscreen="true"
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                allowFullScreen="true"
               ></iframe>
               <p class="title">{{ video.title }}</p>
             </li>

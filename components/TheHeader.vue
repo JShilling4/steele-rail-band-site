@@ -4,7 +4,7 @@
       <RouterLink class="logo" to="/">
         <NuxtImg
           provider="cloudinary"
-          src="v1717856953/logo_qxdxee.jpg"
+          src="v1717856953/steele_rail_band/logos/logo_qxdxee.jpg"
           class="logo"
         />
         <span class="sr-only">Home</span>
