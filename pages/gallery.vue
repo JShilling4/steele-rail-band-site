@@ -21,8 +21,16 @@
       <section v-show="activeTab === Tabs.Video" class="videos">
         <div class="row">
           <ul class="video-gallery">
-            <li v-for="video in fbVideos" :key="video.title">
+            <li v-for="video in videos" :key="video.title">
               <iframe
+                :src="video.url"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+              <!-- <iframe
                 :src="video.url"
                 width="267"
                 height="476"
@@ -31,7 +39,7 @@
                 frameborder="0"
                 allowfullscreen="true"
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              ></iframe>
+              ></iframe> -->
               <p class="title">{{ video.title }}</p>
             </li>
             <li></li>
@@ -54,54 +62,26 @@ const supabase = useSupabaseClient();
 const title = ref("Steele Rail Band - Gallery");
 const description = ref("Browse Steele Rail Band photos and videos.");
 const showImages = ref<Tables<"show_images">[]>([]);
-const fbVideos = [
+const videos = [
   {
     title: "Strawberry Wine",
-    url: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fposts%2Fpfbid02CNS8QG6qexMR7FCe3cyRULkWZ4mHhRiBFx1cNkiku6A6XsPzZQNLUvJqXZzFUX2ql&show_text=true&width=500",
-  },
-  {
-    title: "Drink In My Hand",
-    url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F2281168242093724%2F&show_text=false&width=267&t=0",
-  },
-  {
-    title: "Heart On Fire",
-    url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F1028770155237605%2F&show_text=false&width=267&t=0",
-  },
-  {
-    title: "Play That Funky Music",
-    url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F754867566414024%2F&show_text=false&width=267&t=0",
+    url: "https://www.youtube.com/embed/Bp1EiUNBl3w?si=G3Ha3UxjOJotBMYF",
   },
   {
     title: "Whitehouse Road",
-    url: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fposts%2Fpfbid0tXENoAy9dzzEc9DUvbAyPs99Nn6bgjwsgJcboeKfn7tiK9BYmmjkoFZ3UfUVEC6pl&show_text=true&width=500",
+    url: "https://www.youtube.com/embed/Rw4-zGXdw7k?si=649WeUehpIdsNQNH",
   },
   {
     title: "American Band",
-    url: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fposts%2Fpfbid0iEBA6Pw7tPrtQ8nbqw7VDyvmfsECSc8BAE8B6sbAh6kg4LiaG5g9kEWTorrn3byjl&show_text=true&width=500",
-  },
-  {
-    title: "Down In Mississippi",
-    url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F546211810900402%2F&show_text=false&width=267&t=0",
+    url: "https://www.youtube.com/embed/DN--XwKvQlE?si=XnFGtEPeXQxirU3M",
   },
   {
     title: "Born to be Wild",
-    url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fklutzwd%2Fvideos%2F1428913524660170%2F&show_text=false&width=267&t=0",
+    url: "https://www.youtube.com/embed/mTMkzYXETYY?si=nm9yaOT1z_VgrFKr",
   },
   {
     title: "Need You Tonight",
-    url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fkimberly.bollan%2Fvideos%2F3626160614325358%2F&show_text=false&width=267&t=0",
-  },
-  // {
-  //   title: "Stop Draggin' My Heart",
-  //   url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F939100403817257%2F&show_text=false&width=267&t=0",
-  // },
-  // {
-  //   title: "Seven Nation Army",
-  //   url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F675182124640035%2F&show_text=false&width=267&t=0",
-  // },
-  {
-    title: "The Middle",
-    url: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsteelerailband%2Fvideos%2F6424770004236787%2F&show_text=false&width=267&t=0",
+    url: "https://www.youtube.com/embed/-j4w7tdd_IQ?si=jahZQNJxzGzMmfLz",
   },
 ];
 
@@ -110,7 +90,7 @@ enum Tabs {
   Video = "videos",
 }
 const { activeTab } = useTabs(Tabs.Photo);
-
+const loadingImages = ref(false);
 const tabOptions = [
   {
     id: Tabs.Photo,
@@ -123,11 +103,13 @@ const tabOptions = [
 ];
 
 async function getImages() {
+  loadingImages.value = true;
   const { data: show_images, error } = await supabase
     .from("show_images")
     .select("*");
   if (!error) {
     showImages.value = show_images;
+    loadingImages.value = false;
   }
 }
 
