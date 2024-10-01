@@ -30,16 +30,6 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
-              <!-- <iframe
-                :src="video.url"
-                width="267"
-                height="476"
-                style="border: none; overflow: hidden"
-                scrolling="no"
-                frameborder="0"
-                allowfullscreen="true"
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              ></iframe> -->
               <p class="title">{{ video.title }}</p>
             </li>
             <li></li>
