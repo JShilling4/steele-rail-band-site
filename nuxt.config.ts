@@ -79,4 +79,13 @@ export default defineNuxtConfig({
       baseURL: "https://res.cloudinary.com/damqu5egp/image/upload/",
     },
   },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler",
+        },
+      },
+    },
+  },
 });
