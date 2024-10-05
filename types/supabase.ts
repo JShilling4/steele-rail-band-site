@@ -1,3 +1,4 @@
+
 export type Json =
   | string
   | number
@@ -7,23 +8,51 @@ export type Json =
   | Json[]
 
 export type Database = {
+  graphql_public: {
+    Tables: {
+      [_ in never]: never
+    }
+    Views: {
+      [_ in never]: never
+    }
+    Functions: {
+      graphql: {
+        Args: {
+          operationName?: string
+          query?: string
+          variables?: Json
+          extensions?: Json
+        }
+        Returns: Json
+      }
+    }
+    Enums: {
+      [_ in never]: never
+    }
+    CompositeTypes: {
+      [_ in never]: never
+    }
+  }
   public: {
     Tables: {
       contact: {
         Row: {
           email: string | null
+          fb_url: string | null
           id: number
           name: string
           phone: string | null
         }
         Insert: {
           email?: string | null
+          fb_url?: string | null
           id?: number
           name: string
           phone?: string | null
         }
         Update: {
           email?: string | null
+          fb_url?: string | null
           id?: number
           name?: string
           phone?: string | null
@@ -36,47 +65,62 @@ export type Database = {
           id: number
           image_url: string | null
           last_name: string | null
+          permission_level: string | null
+          phone: string | null
           profile_color: string | null
+          sort_order: number | null
           title: string
+          user_id: string | null
         }
         Insert: {
           first_name: string
           id?: number
           image_url?: string | null
           last_name?: string | null
+          permission_level?: string | null
+          phone?: string | null
           profile_color?: string | null
+          sort_order?: number | null
           title: string
+          user_id?: string | null
         }
         Update: {
           first_name?: string
           id?: number
           image_url?: string | null
           last_name?: string | null
+          permission_level?: string | null
+          phone?: string | null
           profile_color?: string | null
+          sort_order?: number | null
           title?: string
+          user_id?: string | null
         }
         Relationships: []
       }
       rehearsal: {
         Row: {
-          agenda: string[] | null
           date: string
           id: number
-          include_new_songs: boolean
+          new_songs: number[] | null
+          notes: string | null
+          review_songs: number[] | null
           start_time: string | null
         }
         Insert: {
-          agenda?: string[] | null
           date: string
           id?: number
-          include_new_songs?: boolean
+          new_songs?: number[] | null
+          notes?: string | null
+          review_songs?: number[] | null
           start_time?: string | null
         }
         Update: {
-          agenda?: string[] | null
           date?: string
           id?: number
-          include_new_songs?: boolean
+          new_songs?: number[] | null
+          notes?: string | null
+          review_songs?: number[] | null
           start_time?: string | null
         }
         Relationships: []
@@ -84,27 +128,15 @@ export type Database = {
       set: {
         Row: {
           id: number
-          name: string
-          notes: string | null
           songs: number[] | null
-          sort_order: number
-          type: Database["public"]["Enums"]["set_type"] | null
         }
         Insert: {
           id?: number
-          name: string
-          notes?: string | null
           songs?: number[] | null
-          sort_order?: number
-          type?: Database["public"]["Enums"]["set_type"] | null
         }
         Update: {
           id?: number
-          name?: string
-          notes?: string | null
           songs?: number[] | null
-          sort_order?: number
-          type?: Database["public"]["Enums"]["set_type"] | null
         }
         Relationships: []
       }
@@ -112,19 +144,19 @@ export type Database = {
         Row: {
           id: number
           name: string
-          sets: number[]
+          sets: number[] | null
           url: string | null
         }
         Insert: {
           id?: number
           name: string
-          sets?: number[]
+          sets?: number[] | null
           url?: string | null
         }
         Update: {
           id?: number
           name?: string
-          sets?: number[]
+          sets?: number[] | null
           url?: string | null
         }
         Relationships: []
@@ -164,7 +196,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "venue"
             referencedColumns: ["id"]
-          }
+          },
         ]
       }
       show_images: {
@@ -193,8 +225,8 @@ export type Database = {
           artist: string
           download_url: string | null
           id: number
+          is_highlighted: boolean
           link_url: string | null
-          mood: Database["public"]["Enums"]["song_mood"] | null
           specials: string[] | null
           status: Database["public"]["Enums"]["song_status"]
           title: string
@@ -204,8 +236,8 @@ export type Database = {
           artist: string
           download_url?: string | null
           id?: number
+          is_highlighted?: boolean
           link_url?: string | null
-          mood?: Database["public"]["Enums"]["song_mood"] | null
           specials?: string[] | null
           status: Database["public"]["Enums"]["song_status"]
           title: string
@@ -215,8 +247,8 @@ export type Database = {
           artist?: string
           download_url?: string | null
           id?: number
+          is_highlighted?: boolean
           link_url?: string | null
-          mood?: Database["public"]["Enums"]["song_mood"] | null
           specials?: string[] | null
           status?: Database["public"]["Enums"]["song_status"]
           title?: string
@@ -229,7 +261,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "member"
             referencedColumns: ["id"]
-          }
+          },
         ]
       }
       venue: {
@@ -238,6 +270,7 @@ export type Database = {
           city: string | null
           contact: number | null
           id: number
+          is_private: boolean
           name: string
           phone: string | null
           serves_food: boolean
@@ -249,6 +282,7 @@ export type Database = {
           city?: string | null
           contact?: number | null
           id?: number
+          is_private?: boolean
           name: string
           phone?: string | null
           serves_food?: boolean
@@ -260,6 +294,7 @@ export type Database = {
           city?: string | null
           contact?: number | null
           id?: number
+          is_private?: boolean
           name?: string
           phone?: string | null
           serves_food?: boolean
@@ -273,7 +308,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "contact"
             referencedColumns: ["id"]
-          }
+          },
         ]
       }
     }
@@ -284,7 +319,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      set_type: "3h" | "4h" | "Country"
+      set_type: "3h" | "4h" | "4h Rock"
       song_mood: "fast dance" | "slow dance" | "drink" | "singalong"
       song_status:
         | "suggested"
@@ -300,14 +335,16 @@ export type Database = {
   }
 }
 
+type PublicSchema = Database[Extract<keyof Database, "public">]
+
 export type Tables<
   PublicTableNameOrOptions extends
-    | keyof (Database["public"]["Tables"] & Database["public"]["Views"])
+    | keyof (PublicSchema["Tables"] & PublicSchema["Views"])
     | { schema: keyof Database },
   TableName extends PublicTableNameOrOptions extends { schema: keyof Database }
     ? keyof (Database[PublicTableNameOrOptions["schema"]]["Tables"] &
         Database[PublicTableNameOrOptions["schema"]]["Views"])
-    : never = never
+    : never = never,
 > = PublicTableNameOrOptions extends { schema: keyof Database }
   ? (Database[PublicTableNameOrOptions["schema"]]["Tables"] &
       Database[PublicTableNameOrOptions["schema"]]["Views"])[TableName] extends {
@@ -315,67 +352,67 @@ export type Tables<
     }
     ? R
     : never
-  : PublicTableNameOrOptions extends keyof (Database["public"]["Tables"] &
-      Database["public"]["Views"])
-  ? (Database["public"]["Tables"] &
-      Database["public"]["Views"])[PublicTableNameOrOptions] extends {
-      Row: infer R
-    }
-    ? R
+  : PublicTableNameOrOptions extends keyof (PublicSchema["Tables"] &
+        PublicSchema["Views"])
+    ? (PublicSchema["Tables"] &
+        PublicSchema["Views"])[PublicTableNameOrOptions] extends {
+        Row: infer R
+      }
+      ? R
+      : never
     : never
-  : never
 
 export type TablesInsert<
   PublicTableNameOrOptions extends
-    | keyof Database["public"]["Tables"]
+    | keyof PublicSchema["Tables"]
     | { schema: keyof Database },
   TableName extends PublicTableNameOrOptions extends { schema: keyof Database }
     ? keyof Database[PublicTableNameOrOptions["schema"]]["Tables"]
-    : never = never
+    : never = never,
 > = PublicTableNameOrOptions extends { schema: keyof Database }
   ? Database[PublicTableNameOrOptions["schema"]]["Tables"][TableName] extends {
       Insert: infer I
     }
     ? I
     : never
-  : PublicTableNameOrOptions extends keyof Database["public"]["Tables"]
-  ? Database["public"]["Tables"][PublicTableNameOrOptions] extends {
-      Insert: infer I
-    }
-    ? I
+  : PublicTableNameOrOptions extends keyof PublicSchema["Tables"]
+    ? PublicSchema["Tables"][PublicTableNameOrOptions] extends {
+        Insert: infer I
+      }
+      ? I
+      : never
     : never
-  : never
 
 export type TablesUpdate<
   PublicTableNameOrOptions extends
-    | keyof Database["public"]["Tables"]
+    | keyof PublicSchema["Tables"]
     | { schema: keyof Database },
   TableName extends PublicTableNameOrOptions extends { schema: keyof Database }
     ? keyof Database[PublicTableNameOrOptions["schema"]]["Tables"]
-    : never = never
+    : never = never,
 > = PublicTableNameOrOptions extends { schema: keyof Database }
   ? Database[PublicTableNameOrOptions["schema"]]["Tables"][TableName] extends {
       Update: infer U
     }
     ? U
     : never
-  : PublicTableNameOrOptions extends keyof Database["public"]["Tables"]
-  ? Database["public"]["Tables"][PublicTableNameOrOptions] extends {
-      Update: infer U
-    }
-    ? U
+  : PublicTableNameOrOptions extends keyof PublicSchema["Tables"]
+    ? PublicSchema["Tables"][PublicTableNameOrOptions] extends {
+        Update: infer U
+      }
+      ? U
+      : never
     : never
-  : never
 
 export type Enums<
   PublicEnumNameOrOptions extends
-    | keyof Database["public"]["Enums"]
+    | keyof PublicSchema["Enums"]
     | { schema: keyof Database },
   EnumName extends PublicEnumNameOrOptions extends { schema: keyof Database }
     ? keyof Database[PublicEnumNameOrOptions["schema"]]["Enums"]
-    : never = never
+    : never = never,
 > = PublicEnumNameOrOptions extends { schema: keyof Database }
   ? Database[PublicEnumNameOrOptions["schema"]]["Enums"][EnumName]
-  : PublicEnumNameOrOptions extends keyof Database["public"]["Enums"]
-  ? Database["public"]["Enums"][PublicEnumNameOrOptions]
-  : never
+  : PublicEnumNameOrOptions extends keyof PublicSchema["Enums"]
+    ? PublicSchema["Enums"][PublicEnumNameOrOptions]
+    : never

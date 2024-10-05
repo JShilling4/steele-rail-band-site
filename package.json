@@ -8,7 +8,7 @@
     "postinstall": "nuxt prepare",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint . --fix",
-    "gentypes": "npx supabase gen types typescript --linked > ./src/types/supabase.ts"
+    "gentypes": "npx supabase gen types typescript --linked > types/supabase.ts"
   },
   "devDependencies": {
     "@nuxt/eslint": "^0.5.7",
