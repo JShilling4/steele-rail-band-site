@@ -25,16 +25,21 @@
     <div class="content-wrapper">
       <div class="content-container">
         <div class="member-images">
-          <div class="member-container">
-            <NuxtImg
-              provider="cloudinary"
-              src="v1717951762/steele_rail_band/members/ken-1_q9yg1n.jpg"
+          <div
+            v-for="member in members"
+            :key="member.last_name"
+            class="member-container"
+          >
+            <img
+              :src="member.image_url"
               class="member-image"
               alt="Ken on lead & backup vocals - Steele Rail Band"
             />
-            <p class="member-name"><span>Ken</span> Lead Vocals</p>
+            <p class="member-name">
+              <span>{{ member.first_name }}</span> {{ member.title }}
+            </p>
           </div>
-          <div class="member-container">
+          <!-- <div class="member-container">
             <NuxtImg
               provider="cloudinary"
               src="v1717951755/steele_rail_band/members/amber-1_anuaoc.jpg"
@@ -87,7 +92,7 @@
               alt="Brent, sound engineer for Steele Rail Band"
             />
             <p class="member-name"><span>Brent</span> Sound Engineer</p>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -95,11 +100,33 @@
 </template>
 
 <script setup lang="ts">
+import type { Database, IMember } from "~/types";
+
+const client = useSupabaseClient<Database>();
+
+const members = ref<IMember[]>([]);
+
+onBeforeMount(async () => {
+  const { data } = await useAsyncData("member", async () => {
+    const { data } = await client.from("member").select(`
+        title,
+        first_name,
+        last_name,
+        image_url,
+        sort_order
+      `);
+    return data;
+  });
+
+  members.value = (data.value as IMember[]).sort(
+    (a, b) => a.sort_order - b.sort_order,
+  );
+});
+
 const title = ref("Steele Rail Band - About");
 const description = ref(
   "About the Steele Rail Band. Member lineup and other band information.",
 );
-
 useHead({
   title,
   meta: [

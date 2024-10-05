@@ -60,23 +60,41 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   css: [
     "assets/sass/main.scss",
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
+
   ssr: false,
+
   modules: [
     ["@nuxtjs/robots", { configPath: "~/config/robots.config" }],
     "@nuxtjs/supabase",
     "@nuxt/image",
+    "@nuxt/eslint",
   ],
+
   supabase: {
     redirect: false,
   },
+
   image: {
     provider: "cloudinary",
     cloudinary: {
       baseURL: "https://res.cloudinary.com/damqu5egp/image/upload/",
     },
   },
+
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler",
+        },
+      },
+    },
+  },
+
+  compatibilityDate: "2024-10-05",
 });

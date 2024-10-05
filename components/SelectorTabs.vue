@@ -2,6 +2,7 @@
   <div class="tabs-container">
     <div
       v-for="tab in options"
+      :key="tab.id"
       :class="['tab', { '--active': activeTab === tab.id }]"
       @click="emit('tab-change', tab.id)"
     >

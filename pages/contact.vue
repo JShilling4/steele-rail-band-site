@@ -10,7 +10,7 @@
         </p>
         <div class="content">
           <form name="contacts-form" class="contactForm" method="POST" netlify>
-            <input type="hidden" name="form-name" value="contacts-form" />
+            <input type="hidden" name="form-name" value="contacts-form" >
             <InputGroup>
               <FormLabel>Name</FormLabel>
               <TextInput v-model="contactForm.name" name="name" required />

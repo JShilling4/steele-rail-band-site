@@ -70,9 +70,11 @@ onUnmounted((): void => {
 
 function onResize(): void {
   windowWidth.value = window.innerWidth;
-  windowWidth.value >= 1025
-    ? (showMenu.value = true)
-    : (showMenu.value = false);
+  if (windowWidth.value >= 1025) {
+    showMenu.value = true;
+  } else {
+    showMenu.value = false;
+  }
 }
 
 function toggleMenu(): void {

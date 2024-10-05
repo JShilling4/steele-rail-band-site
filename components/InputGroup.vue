@@ -5,7 +5,7 @@
       marginBottom: bottomMargin,
     }"
   >
-    <slot></slot>
+    <slot/>
   </div>
 </template>
 
