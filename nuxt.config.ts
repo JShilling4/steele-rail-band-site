@@ -72,6 +72,7 @@ export default defineNuxtConfig({
     ["@nuxtjs/robots", { configPath: "~/config/robots.config" }],
     "@nuxtjs/supabase",
     "@nuxt/image",
+    "@nuxt/eslint",
   ],
 
   supabase: {

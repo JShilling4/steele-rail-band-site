@@ -12,7 +12,7 @@
         <div class="row">
           <ul class="image-gallery">
             <li v-for="image in showImages" :key="image.id">
-              <img :src="image.url" alt="" />
+              <img :src="image.url" alt="" >
             </li>
           </ul>
         </div>
@@ -29,14 +29,14 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
-              ></iframe>
+              />
               <p class="title">{{ video.title }}</p>
             </li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li/>
+            <li/>
+            <li/>
+            <li/>
+            <li/>
           </ul>
         </div>
       </section>
@@ -45,7 +45,7 @@
 </template>
 
 <script setup lang="ts">
-import { type Tables } from "@/types";
+import type { Tables } from "@/types";
 
 const supabase = useSupabaseClient();
 

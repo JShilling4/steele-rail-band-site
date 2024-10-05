@@ -4,7 +4,7 @@
     :style="{
       width: width,
     }"
-  />
+  >
 </template>
 
 <script setup lang="ts">

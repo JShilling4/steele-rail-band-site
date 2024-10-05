@@ -3,8 +3,7 @@
     :style="{
       width: width,
     }"
-  >
-  </textarea>
+  />
 </template>
 
 <script setup lang="ts">

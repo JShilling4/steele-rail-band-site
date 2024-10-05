@@ -6,7 +6,7 @@
       display: isInline ? 'inline' : 'block',
     }"
   >
-    <slot></slot>
+    <slot/>
   </label>
 </template>
 
