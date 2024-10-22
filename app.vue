@@ -132,7 +132,7 @@ body::-webkit-scrollbar-thumb {
       padding: 10px 3.5rem;
       opacity: 1;
       color: var(--color-secondary);
-      transition: opacity 0.3s;
+      transition: all 0.3s;
 
       @media screen and (max-width: 768px) {
         padding: 15px 35px;
