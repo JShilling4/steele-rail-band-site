@@ -12,7 +12,7 @@
         <div class="row">
           <ul class="image-gallery">
             <li v-for="image in showImages" :key="image.id">
-              <img :src="image.url" alt="" >
+              <img :src="image.url" alt="" />
             </li>
           </ul>
         </div>
@@ -32,11 +32,6 @@
               />
               <p class="title">{{ video.title }}</p>
             </li>
-            <li/>
-            <li/>
-            <li/>
-            <li/>
-            <li/>
           </ul>
         </div>
       </section>
@@ -53,6 +48,10 @@ const title = ref("Steele Rail Band - Gallery");
 const description = ref("Browse Steele Rail Band photos and videos.");
 const showImages = ref<Tables<"show_images">[]>([]);
 const videos = [
+  {
+    title: "Keep Your Hands Medley",
+    url: "https://www.youtube.com/embed/vJshvkF_AKU?si=GtxGPyseRRZearKK",
+  },
   {
     title: "Strawberry Wine",
     url: "https://www.youtube.com/embed/Bp1EiUNBl3w?si=G3Ha3UxjOJotBMYF",
