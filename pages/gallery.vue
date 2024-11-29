@@ -12,7 +12,7 @@
         <div class="row">
           <ul class="image-gallery">
             <li v-for="image in showImages" :key="image.id">
-              <img :src="image.url" alt="" >
+              <img :src="image.url" alt="" />
             </li>
           </ul>
         </div>
@@ -21,7 +21,7 @@
       <section v-show="activeTab === Tabs.Video" class="videos">
         <div class="row">
           <ul class="video-gallery">
-            <li v-for="video in videos" :key="video.title">
+            <li v-for="video in showVideos" :key="video.title">
               <iframe
                 :src="video.url"
                 title="YouTube video player"
@@ -32,11 +32,6 @@
               />
               <p class="title">{{ video.title }}</p>
             </li>
-            <li/>
-            <li/>
-            <li/>
-            <li/>
-            <li/>
           </ul>
         </div>
       </section>
@@ -52,28 +47,7 @@ const supabase = useSupabaseClient();
 const title = ref("Steele Rail Band - Gallery");
 const description = ref("Browse Steele Rail Band photos and videos.");
 const showImages = ref<Tables<"show_images">[]>([]);
-const videos = [
-  {
-    title: "Strawberry Wine",
-    url: "https://www.youtube.com/embed/Bp1EiUNBl3w?si=G3Ha3UxjOJotBMYF",
-  },
-  {
-    title: "Whitehouse Road",
-    url: "https://www.youtube.com/embed/Rw4-zGXdw7k?si=649WeUehpIdsNQNH",
-  },
-  {
-    title: "American Band",
-    url: "https://www.youtube.com/embed/DN--XwKvQlE?si=XnFGtEPeXQxirU3M",
-  },
-  {
-    title: "Born to be Wild",
-    url: "https://www.youtube.com/embed/mTMkzYXETYY?si=nm9yaOT1z_VgrFKr",
-  },
-  {
-    title: "Need You Tonight",
-    url: "https://www.youtube.com/embed/-j4w7tdd_IQ?si=jahZQNJxzGzMmfLz",
-  },
-];
+const showVideos = ref<Tables<"show_videos">[]>([]);
 
 enum Tabs {
   Photo = "photos",
@@ -81,6 +55,7 @@ enum Tabs {
 }
 const { activeTab } = useTabs(Tabs.Photo);
 const loadingImages = ref(false);
+const loadingVideos = ref(false);
 const tabOptions = [
   {
     id: Tabs.Photo,
@@ -103,8 +78,20 @@ async function getImages() {
   }
 }
 
+async function getVideos() {
+  loadingVideos.value = true;
+  const { data: show_videos, error } = await supabase
+    .from("show_videos")
+    .select("*");
+  if (!error) {
+    showVideos.value = show_videos;
+    loadingVideos.value = false;
+  }
+}
+
 onMounted(() => {
   getImages();
+  getVideos();
 });
 
 useHead({

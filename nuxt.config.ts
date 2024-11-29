@@ -61,10 +61,7 @@ export default defineNuxtConfig({
     },
   },
 
-  css: [
-    "assets/sass/main.scss",
-    "@fortawesome/fontawesome-svg-core/styles.css",
-  ],
+  css: ["/styles/main.scss", "@fortawesome/fontawesome-svg-core/styles.css"],
 
   ssr: false,
 
