@@ -1,13 +1,16 @@
 <template>
   <div class="view-container --with-bg">
-    <!-- <SelectorTabs
-      :active-tab="activeTab"
-      :options="tabOptions"
-      @tab-change="(val) => (activeTab = val)"
-    /> -->
     <div :class="['shows-container', { 'temp-height': !allShows.length }]">
       <div class="table-wrapper">
-        <ShowTable v-for="(show, i) in computedShows" :key="i" :show="show" />
+        <ShowTable
+          v-for="(show, i) in currentYearShows"
+          :key="i"
+          :show="show"
+        />
+      </div>
+      <div class="table-wrapper">
+        <h1 class="next-year-heading">{{ new Date().getFullYear() + 1 }}</h1>
+        <ShowTable v-for="(show, i) in nextYearShows" :key="i" :show="show" />
       </div>
     </div>
   </div>
@@ -33,36 +36,12 @@ const currentYearShows = computed(() => {
     return show.date.slice(0, 4) === String(thisYear) && showDate >= today;
   });
 });
-// const nextYearShows = computed(() => {
-//   const thisYear = new Date().getFullYear();
-//   return allShows.value.filter(
-//     (show) => show.date.slice(0, 4) === String(Number(thisYear) + 1),
-//   );
-// });
-
-// enum Tabs {
-//   CurrentYear = "2024",
-//   NextYear = "2025",
-// }
-// const { activeTab } = useTabs(Tabs.CurrentYear);
-
-const computedShows = computed(() => {
-  // if (activeTab.value === Tabs.NextYear) {
-  //   return nextYearShows.value;
-  // }
-  return currentYearShows.value;
+const nextYearShows = computed(() => {
+  const thisYear = new Date().getFullYear();
+  return allShows.value.filter(
+    (show) => show.date.slice(0, 4) === String(Number(thisYear) + 1),
+  );
 });
-
-// const tabOptions = [
-//   {
-//     id: Tabs.CurrentYear,
-//     label: Tabs.CurrentYear,
-//   },
-//   {
-//     id: Tabs.NextYear,
-//     label: Tabs.NextYear,
-//   },
-// ];
 
 onBeforeMount(async () => {
   const { data: shows } = await useAsyncData("show", async () => {
@@ -94,6 +73,7 @@ onBeforeMount(async () => {
 .table-wrapper {
   margin: 2rem auto 0;
   color: #fff;
+  text-align: center;
 
   @media screen and (max-width: 556px) {
     padding: 0 0 4rem;
@@ -101,9 +81,20 @@ onBeforeMount(async () => {
   @media screen and (max-width: 430px) {
     padding: 0 0 4rem;
   }
+
+  .next-year-heading {
+    display: inline-block;
+    padding: 1rem 4rem;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    color: #000;
+  }
 }
 .shows-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   overflow-x: auto;
   padding: 0 3rem;
