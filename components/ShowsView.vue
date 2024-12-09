@@ -8,7 +8,7 @@
           :show="show"
         />
       </div>
-      <div class="table-wrapper">
+      <div v-if="allShows.length" class="table-wrapper">
         <h1 class="next-year-heading">{{ new Date().getFullYear() + 1 }}</h1>
         <ShowTable v-for="(show, i) in nextYearShows" :key="i" :show="show" />
       </div>
