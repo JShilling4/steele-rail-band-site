@@ -1,49 +1,52 @@
-@import "variables";
-@import "mixins";
+@use "./mixins" as *;
 
 @font-face {
-  font-family: $RobotoFamily;
-  @include font-definition($RobotoName, $RobotoPath, "Black");
+  font-family: "Roboto";
+  @include font-definition("Roboto", "../assets/fonts/Roboto", "Black");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: $RobotoFamily;
-  @include font-definition($RobotoName, $RobotoPath, "Bold");
+  font-family: "Roboto";
+  @include font-definition("Roboto", "../assets/fonts/Roboto", "Bold");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: $RobotoFamily;
-  @include font-definition($RobotoName, $RobotoPath, "Medium");
+  font-family: "Roboto";
+  @include font-definition("Roboto", "../assets/fonts/Roboto", "Medium");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: $RobotoFamily;
-  @include font-definition($RobotoName, $RobotoPath, "Regular");
+  font-family: "Roboto";
+  @include font-definition("Roboto", "../assets/fonts/Roboto", "Regular");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: $RobotoFamily;
-  @include font-definition($RobotoName, $RobotoPath, "Light");
+  font-family: "Roboto";
+  @include font-definition("Roboto", "../assets/fonts/Roboto", "Light");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: $RobotoFamily;
-  @include font-definition($RobotoName, $RobotoPath, "Thin");
+  font-family: "Roboto";
+  @include font-definition("Roboto", "../assets/fonts/Roboto", "Thin");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: $YesteryearFamily;
-  @include font-definition($YesteryearName, $YesteryearPath, "Regular");
+  font-family: "Yesteryear";
+  @include font-definition(
+    "Yesteryear",
+    "../assets/fonts/Yesteryear",
+    "Regular"
+  );
 }
