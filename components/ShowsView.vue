@@ -103,9 +103,6 @@ onBeforeMount(async () => {
     padding: 0 0 0;
     display: block;
   }
-  @media screen and (max-width: 430px) {
-    padding: 0 1rem;
-  }
 
   &.temp-height {
     min-height: 90vh;

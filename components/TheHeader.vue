@@ -4,7 +4,7 @@
       <RouterLink class="logo" to="/">
         <NuxtImg
           provider="cloudinary"
-          src="v1738789762/logo-nohat_xg5znc.jpg"
+          src="v1717951758/steele_rail_band/logos/footer-logo_b101hs.jpg"
           class="logo"
         />
         <span class="sr-only">Home</span>
@@ -92,22 +92,22 @@ function toggleMenu(): void {
   width: 100%;
   z-index: 100;
   margin: 0 auto;
-  padding: 0 3rem 0 1rem;
+  padding: 1rem 3rem 1rem 2rem;
   background-color: var(--bg-primary);
 
   @media screen and (max-width: 1200px) {
-    padding: 0 0 0 1rem;
+    padding: 0.5rem 1rem 0 1.5rem;
   }
 }
 
 .logo {
-  height: 150px;
+  height: 125px;
 
   @media screen and (max-width: 1024px) {
     height: 100px;
   }
   @media screen and (max-width: 430px) {
-    height: 75px;
+    height: 65px;
   }
 }
 
@@ -169,6 +169,7 @@ nav {
   display: none;
   position: absolute;
   right: 2rem;
+  top: 1rem;
   opacity: 0.8;
   font-size: 2rem;
   color: var(--color-secondary);
