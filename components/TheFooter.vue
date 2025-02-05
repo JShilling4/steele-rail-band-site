@@ -53,7 +53,7 @@ import { RouterLink } from "vue-router";
 
 <style lang="scss">
 footer {
-  background-color: var(--banner-color);
+  background-color: var(--bg-primary);
   padding: 2rem 0 0;
 
   @media screen and (max-width: 1024px) {

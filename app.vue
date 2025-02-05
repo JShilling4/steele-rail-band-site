@@ -101,7 +101,7 @@ body::-webkit-scrollbar-thumb {
       background: none;
     }
     @media screen and (max-width: 768px) {
-      background-color: var(--bg-black);
+      background-color: var(--bg-primary);
     }
   }
 }

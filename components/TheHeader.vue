@@ -4,7 +4,7 @@
       <RouterLink class="logo" to="/">
         <NuxtImg
           provider="cloudinary"
-          src="v1717856953/steele_rail_band/logos/logo_qxdxee.jpg"
+          src="v1738789762/logo-nohat_xg5znc.jpg"
           class="logo"
         />
         <span class="sr-only">Home</span>
@@ -84,7 +84,7 @@ function toggleMenu(): void {
 
 <style lang="scss" scoped>
 .outer-wrapper {
-  background-color: var(--bg-black);
+  background-color: var(--bg-primary);
 }
 
 .wrapper {
@@ -93,7 +93,7 @@ function toggleMenu(): void {
   z-index: 100;
   margin: 0 auto;
   padding: 0 3rem 0 1rem;
-  background-color: var(--bg-black);
+  background-color: var(--bg-primary);
 
   @media screen and (max-width: 1200px) {
     padding: 0 0 0 1rem;
