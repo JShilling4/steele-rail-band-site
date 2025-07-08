@@ -8,10 +8,10 @@
           :show="show"
         />
       </div>
-      <div v-if="allShows.length" class="table-wrapper">
+      <!-- <div v-if="allShows.length" class="table-wrapper">
         <h1 class="next-year-heading">{{ new Date().getFullYear() + 1 }}</h1>
         <ShowTable v-for="(show, i) in nextYearShows" :key="i" :show="show" />
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -36,12 +36,12 @@ const currentYearShows = computed(() => {
     return show.date.slice(0, 4) === String(thisYear) && showDate >= today;
   });
 });
-const nextYearShows = computed(() => {
-  const thisYear = new Date().getFullYear();
-  return allShows.value.filter(
-    (show) => show.date.slice(0, 4) === String(Number(thisYear) + 1),
-  );
-});
+// const nextYearShows = computed(() => {
+//   const thisYear = new Date().getFullYear();
+//   return allShows.value.filter(
+//     (show) => show.date.slice(0, 4) === String(Number(thisYear) + 1),
+//   );
+// });
 
 onBeforeMount(async () => {
   const { data: shows } = await useAsyncData("show", async () => {
@@ -102,9 +102,6 @@ onBeforeMount(async () => {
   @media screen and (max-width: 768px) {
     padding: 0 0 0;
     display: block;
-  }
-  @media screen and (max-width: 430px) {
-    padding: 0 1rem;
   }
 
   &.temp-height {

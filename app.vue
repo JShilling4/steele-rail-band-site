@@ -43,7 +43,7 @@ a {
 .page-wrapper {
   margin: 0 auto;
   color: #fff;
-  padding: 1rem 2rem 0;
+  padding: 3rem 2rem 0;
 
   @media screen and (max-width: 1024px) {
     padding-top: 2rem;
@@ -101,7 +101,7 @@ body::-webkit-scrollbar-thumb {
       background: none;
     }
     @media screen and (max-width: 768px) {
-      background-color: var(--bg-black);
+      background-color: var(--bg-primary);
     }
   }
 }
