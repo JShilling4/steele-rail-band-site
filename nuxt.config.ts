@@ -54,10 +54,6 @@ export default defineNuxtConfig({
         { rel: "icon", type: "image/png", href: "/favicon.ico" },
       ],
       title: "Steele Rail Band | Ride The Rail",
-      noscript: [
-        // <noscript>Javascript is required</noscript>
-        { children: "Javascript is required" },
-      ],
     },
   },
 
