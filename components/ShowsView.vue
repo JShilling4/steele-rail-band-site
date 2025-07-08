@@ -74,6 +74,7 @@ onBeforeMount(async () => {
   margin: 2rem auto 0;
   color: #fff;
   text-align: center;
+  min-width: 40%;
 
   @media screen and (max-width: 556px) {
     padding: 0 0 4rem;
